@@ -1,0 +1,27 @@
+section.hPartnerships(style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC)" data-src=imgPath+"bg-partnerships.png")
+    .container
+        .heading-wrap
+            h2.heading.heading--light
+                | Global Partnerships
+                small We partner with organisations across the world to give us a truly global presence.
+            a.btn.btn-outline-light(href="https://www.dezshira.com/partnerships/global" title="Show all Partnerships") Show all Partnerships
+
+        -
+            var partnerships = [
+                {title:'rglobal',   img:'rglobal',      url:'https://www.irglobal.com/'},
+                {title:'hsbc',      img:'hsbc',         url:'https://www.dezshira.com/partnerships/global'},
+                {title:'ETL Global',img:'etl-global',   url:'http://www.etl.de/en/company-profile'},
+                {title:'lea',       img:'lea',          url:'http://www.leadingedgealliance.com/'},
+                //- {title:'eu-asean',  img:'eu-asean',     url:'http://eu-asean.eu/'},
+                //- {title:'excelia',   img:'excelia',      url:'https://www.excelia.com/en/'},
+                //- {title:'servcorp',  img:'servcorp',     url:'http://www.servcorp.net/'},
+            ]
+        .hPartnerships__slide
+            each p in partnerships    
+                .hPartnerships__item
+                    a(href=p.url title=p.title target="blank") 
+                        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src= imgPath + 'partnerships/' + p.img+ ".png", alt=p.title)
+            // Item
+// End Partnerships
+|
+|

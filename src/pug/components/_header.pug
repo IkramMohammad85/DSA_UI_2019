@@ -1,0 +1,53 @@
+header.navbar.navbar-expand-md.flex-column.flex-md-row
+    .container
+        .navbar__logo
+            h1
+                a.navbar-brand(href=url)
+                    img(src=logo alt=title)
+        // End logo
+        |
+        |
+        
+        button.navbar-toggler.collapsed(type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+        // End navbar-toggler
+        |
+        |
+        div(class="collapse navbar-collapse" id="navbarNavDropdown")
+            .navbar-tools
+                .navbar-tools__item.dropdown
+                    a#globalLink.dropdown-toggle.navbar-tools__global(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Global
+                    +dropdown-menu([
+                        {text:'North America Desk', data:'https://www.dezshira.com/international-desk/north-american.html', img:'flag-american'},
+                        {text:'Ireland Desk',       data:'https://www.dezshira.com/international-desk/uk-ireland.html',     img:'flag-uk-ireland'},
+                        {text:'French Desk',        data:'https://www.dezshira.com/international-desk/french.html',         img:'flag-french'},
+                        {text:'German Desk',        data:'https://www.dezshira.com/international-desk/german.html',         img:'flag-german'},
+                        {text:'Italian Desk',       data:'https://www.dezshira.com/international-desk/italian.html',        img:'flag-italian'},
+                        {text:'Russian Desk',       data:'https://www.dezshira.com/international-desk/russian.html',        img:'flag-russian'},
+                        {text:'Spanish Desk',       data:'https://www.dezshira.com/international-desk/spanish.html',        img:'flag-spanish'},
+                        {text:'关于我们',           data:'https://www.dezshira.com/cn',                                     img:'flag-chinese'},
+                        {text:'Australian Desk',    data:'https://www.dezshira.com/international-desk/australian.html',     img:'flag-australian'},
+                    ],'globalLink')
+                // End tool item
+                .navbar-tools__item
+                    a.navbar-tools__brochure(href="https://www.dezshira.com/brochure") Brochure
+                // End tool item
+            // End tools
+            |
+            |
+            +menuNav(mainActive,mainMenu, '', '', 'navbar-nav', '' ,'nav-item', 'nav-link')
+            // End Main Navigation
+            |
+            |
+            a.navbar-search-show(href="#" title="Search"): span.sr-only Search
+            .navbar-search
+                a.navbar-search__close(href="#" title="Search"): span.sr-only Close
+                form.navbar-search__form(action="https://www.dezshira.com/library")
+                    input.form-control(id="SearchInput" type="text" placeholder="Search..." name="s")
+                    +btn-submit-primary('Go')
+            
+        // End collapse
+// End Header
+|
+|

@@ -1,0 +1,108 @@
+// Sample code
+$top: 100px;
+.wrap {
+    padding-top: $top;
+    background-color: #fff;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        height: $top;
+        background: $bluedark;
+    }
+
+    > .container > p:last-child {
+        margin-bottom: 0;
+    }
+
+    > section {
+        overflow: hidden;
+    }
+
+    @include media-breakpoint-down(sm) {
+        $top: 60px;
+        padding-top: $top;
+
+        &:before {
+            height: $top;
+        }
+    }
+}
+
+.section-mobile-footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+// Fix
+
+.contactBlockSmall .BannerCaption .btn-outline {
+    @extend .btn-sm;
+}
+#Loginpopup .modal-header {
+    display: block;
+}
+
+
+.modal-content .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 8px 15px;
+
+    #Loginpopup & {
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+#loginForm {
+    .form-group {
+        font-size: 12px;
+    }
+    .form-control {
+        height: auto;
+    }
+}
+#loginForm .input-group-addon .fa-envelope, #loginForm .input-group-addon .fa-lock {
+    font-size: 1em;
+    height: 1em;
+    width: 1em;
+    position: relative;
+    top: 2px;
+}
+
+.carousel-indicators {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+.carousel-caption {
+    margin-top: 5px;
+}
+
+#innerPage p {
+    margin-bottom: 1rem;
+    font-size: inherit;
+}
+
+#innerPage .BannerCaption p {
+    margin-bottom: 0;
+    font-size: em(14);
+}
+
+#innerPage .contactBlockSmall{
+    background-size: 100% auto;
+    width: auto;
+    height: 289px;
+    .BannerCaption {
+        .whiteOutLine-btn{
+            padding: 6.5px 1em 4.5px;
+        }
+    }
+}

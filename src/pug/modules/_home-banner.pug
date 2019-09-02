@@ -1,0 +1,70 @@
+-
+    var slide = [
+        { 
+            img: '1.jpg',
+            title:"An award winning professional services firm in Asia.", 
+            url:'https://www.dezshira.com/about-us/our-firm.html',
+            desc: 'Independent legal, tax, and advisory services since 1992.'
+        },
+        { 
+            img: '2.jpg',
+            title:"Need to set up a business in Asia?", 
+            url:'https://www.dezshira.com/services/business-advisory',
+            desc: 'Talk to our lawyers and tax advisors to find the most effective corporate structure for your needs.'
+        },
+        { 
+            img: '3.jpg',
+            title:"Is your company managing taxes in multiple jurisdictions?", 
+            url:'https://www.dezshira.com/services/tax',
+            desc: 'Consult our tax experts about maximizing revenue and minimizing unnecessary costs for your business.'
+        },
+        { 
+            img: '4.jpg',
+            title:"Are your reporting requirements taking too much time?", 
+            url:'https://www.dezshira.com/services/accounting-reporting',
+            desc: 'Talk with our accounting team about managing country-specific and international standards.'
+        },
+        { 
+            img: '5.jpg',
+            title:"Do you need to improve employee engagement and retention?", 
+            url:'https://www.dezshira.com/services/payroll-human-resource-administration',
+            desc: 'Meet our HR and payroll team to streamline admin and implement best local practices.'
+        }
+    ]
+section.hBanner
+    .hBanner__slide
+        each sl in slide
+            // Item
+            .hBanner__slide__item
+                .hBanner__slide__item__img
+                    img(src= imgPath + "banner/" + sl.img, alt=sl.title)
+                .container
+                    .hBanner__slide__item__content
+                        h2.hBanner__slide__item__head
+                            a(href=sl.url title=sl.title)= sl.title
+                        .hBanner__slide__item__desc
+                            p
+                                a(href=sl.url title=sl.title)= sl.desc
+                        .hBanner__slide__item__footer
+                            a.btn.btn-primary(href=sl.url title="Read more") Read more
+            // End Item
+    // End Main Slide
+    |
+    |
+    .hBanner__footer
+        .container
+            .hBanner__nav
+                each sl in slide
+                    // Item
+                    .hBanner__nav__item
+                        .hBanner__nav__item__inner
+                            .hBanner__nav__item__img
+                                img(src= imgPath + "banner/" + sl.img, alt=sl.title)
+                            h3.hBanner__nav__item__head= sl.title
+                    // End Item
+    // End Footer Slide
+    |
+    |
+// End Banner Section
+|
+|

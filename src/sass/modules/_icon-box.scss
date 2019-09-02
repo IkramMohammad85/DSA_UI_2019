@@ -1,0 +1,69 @@
+.boxIcon {
+    // overflow: hidden;
+    &__item {
+        margin-bottom: 34px;
+
+        &:not(:hover) {
+            color: inherit;
+        }
+
+        &__icon {
+            max-width: em(50);
+            margin: 0 auto;
+            display: block;
+            transform-origin: 50% 100%;
+            @include transition(all 0.2s ease-in-out);
+        }
+        &__title {
+            display: block;
+            font-family: inherit;
+            font-size: em(14);
+            font-weight: 400;
+            line-height: (20/14);
+            margin: em(16, 14) auto 0;
+            text-align: center;
+            max-width: em(110, 14);
+        }
+
+        &:hover {
+            .boxIcon__item__icon {
+                transform: scale(1.1);
+            }
+
+            .boxIcon__item__title {
+                color: darken($primary, 10%);
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            flex: 0 0 percentage(1/5);
+            min-width: percentage(1/5);
+
+            &:nth-child(5) ~ .boxIcon__item {
+                margin-bottom: 0;
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 20px;
+            &__icon  {
+                width: em(40);
+            }
+            &__title {
+                margin-top: em(6, 14);
+                line-height: 1.2;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+            &__icon  {
+                width: em(44);
+            }
+            &__title {
+                margin-top: em(12, 14);
+                line-height: 1.3;
+            }
+        }
+    }
+}

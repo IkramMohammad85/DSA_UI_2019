@@ -1,0 +1,132 @@
+.hPartnerships {
+    padding: 45px 0;
+    overflow: hidden;
+    background: {
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    }
+
+    &__slide {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-bottom: 75px;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+
+        > .hPartnerships__item   {
+            flex: 0 0 percentage(1/6);
+            min-width: percentage(1/6);
+
+            &:nth-child(6) ~ .hPartnerships__item {
+                display: none;
+            }
+        }
+
+        &.slick-initialized {
+            display: block;
+        }
+
+        .slick-dots {
+            list-style: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;  
+
+            li {
+                display: block;
+                cursor: pointer;
+                position: relative;
+                width: 1.875em;
+                height: 1.875em;
+
+                &::before,
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 50%;
+                    margin: auto;
+                    width: em(14);
+                    height: em(14);
+                    @include transition();
+                }
+
+                &:before{
+                    background: rgba($white, 0.5);
+                }
+
+                &:after {
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                }
+
+                &.slick-active {
+                    &:before {
+                        background: $white;
+                    }
+
+                    &:after {
+                        width: 100%;
+                        height: 100%;
+                        border-color: rgba($white, 0.35);
+                    }
+                }
+            }
+
+            button {
+                width: em(30);
+                height: em(30);
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__item {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        a {
+            display: block;
+            outline: none !important;
+            background: $white;
+
+            img {
+                opacity: 0.5;
+                @include transition();
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 35px 0;
+
+        &__slide  {
+            padding-bottom: 60px;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        padding: 30px 0;
+
+        &__slide  {
+            padding-bottom: 50px;
+        }
+    }
+}

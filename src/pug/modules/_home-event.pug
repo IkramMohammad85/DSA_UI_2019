@@ -1,0 +1,42 @@
+section.hEvent
+    .container
+        .heading-wrap
+            h2.heading Event Timeline
+            a.btn.btn-outline-primary(href="https://www.dezshira.com/events/" title="Show all Event") SHOW ALL EVENTS
+
+        .hEvent__slide
+            -
+                var events = [
+                    {date:'Mar 28, 2019', status:'Up Coming', title:'Singapore', desc:'Webinar - Singapore: Key Changes to the Employment Act', url:'https://www.dezshira.com/events/details/webinar-8100.html'},
+                    {date:'Mar 28, 2019', status:'Up Coming', title:'Webinar', desc:'Trade War – Tariff Avoidance Strategies', url:'https://www.dezshira.com/events/details/trade-war-tariff-avoidance-strategies-8128.html'},
+                    {date:'Mar 28, 2019', status:'Up Coming', title:'Delhi', desc:'Promoting Investment and Trade in SEZs', url:'https://www.dezshira.com/events/details/promoting-investment-and-trade-in-sezs-8141.html'},
+                    {date:'Mar 28, 2019', status:'Up Coming', title:'Guangzhou', desc:'Seminar: "Hiring and Recruitment: Methodology and Issues"', url:'https://www.dezshira.com/events/details/seminar-hiring-and-recruitment-methodology-and-issues-guangzhou-8143.html'},
+                    {date:'Jan 11, 2019', status:'Active', title:'Nanjing', desc:'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.', url:'#'},
+                    {date:'Dec 26, 2018', status:'Expired', title:'Beijing', desc:'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.', url:'#'},
+                ]
+            each e in events                
+                .hEvent__item
+                    .hEvent__item__inner
+                        .hEvent__item__top
+                            span.hEvent__item__date=e.date
+                            - var cls = ''
+                            if e.status == 'Active'
+                                - cls = 'active'
+                            else if e.status == 'Expired'
+                                - cls = 'expired'
+                            span.hEvent__item__status(class=cls)=e.status
+                            
+                        // End top
+                        .hEvent__item__body
+                            h3.hEvent__item__title: a(href=e.url title=e.title)=e.title
+                            .hEvent__item__desc=e.desc
+                            .hEvent__item__more
+                                a(href=e.url title="Read more") Read more
+                        // End body
+                // End item
+        // End Slide
+    // End container
+
+// End Event Timeline
+|
+|

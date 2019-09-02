@@ -1,0 +1,79 @@
+section.hAbout
+    .container
+        #about-tab.nav.nav-about(role='tablist')
+            h2#about-services-tab.nav-item.active(data-toggle='tab', data-target='#about-services', role='tab', aria-controls='about-services', aria-selected='false')
+                    small About US
+                    span End-to-end services
+            // End item
+            h2#about-presence-tab.nav-item(data-toggle='tab', data-target='#about-presence', role='tab', aria-controls='about-presence', aria-selected='false') 
+                    small About US
+                    span Global presence
+            // End item
+            h2#about-team-tab.nav-item(data-toggle='tab', data-target='#about-team', role='tab', aria-controls='about-team', aria-selected='true') 
+                    small About US
+                    span Experienced team
+            // End item
+        // End Tab
+        #about-tabContent.tab-content
+            #about-services.tab-pane.active(role='tabpanel', aria-labelledby='about-services-tab')
+                .hAbout__body
+                    .hAbout__widget
+                        .hAbout__widget__inner
+                            .hAbout__widget__desc Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
+                            .hAbout__widget__num
+                                span 9
+                                small Services
+                            .hAbout__widget__footer
+                                a.btn.btn-outline-light(href="https://www.dezshira.com/services" title="Read more") Read more
+                    .hAbout__content
+
+                        -
+                            var icons = [
+                                {img: 'ic-business-intelligence',               title:'Business Intelligence',                  url:'https://www.dezshira.com/services/business-intelligence-solutions'},
+                                {img: 'ic-corporate-establishment-structuring', title:'Corporate Establishment & Structuring',  url:'https://www.dezshira.com/services/business-advisory'},
+                                {img: 'ic-due-diligence',                       title:'Due Diligence',                          url:'https://www.dezshira.com/services/legal-financial-due-diligence'},
+                                {img: 'ic-accounting',                          title:'Accounting',                             url:'https://www.dezshira.com/services/accounting-reporting'},
+                                {img: 'ic-hr-payroll',                          title:'HR & Payroll',                           url:'https://www.dezshira.com/services/payroll-human-resource-administration'},
+                                {img: 'ic-tax',                                 title:'Tax',                                    url:'https://www.dezshira.com/services/tax'},
+                                {img: 'ic-audit-risk-advisory',                 title:'Audit & Risk Advisory',                  url:'https://www.dezshira.com/services/audit-financial-review'},
+                                {img: 'ic-technology',                          title:'Technology',                             url:'https://www.dezshira.com/services/information-technology-solutions'},
+                                {img: 'ic-outbound-direct-investment',          title:'Outbound Direct Investment',             url:'https://www.dezshira.com/services/outbound-direct-investment'},
+                            ]
+                        .boxIcon
+                            .boxIcon__inner.row
+                                each ic in icons
+                                    a.boxIcon__item.col-6.col-md-4.col-lg-3.col-xl-2(href=ic.url title=ic.title)
+                                        span.boxIcon__item__icon
+                                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src= imgPath + "icons/" + ic.img + ".svg", alt=ic.title)
+                                        span.boxIcon__item__title=ic.title
+            // End Pane
+            #about-presence.tab-pane(role='tabpanel', aria-labelledby='about-presence-tab')
+                .hAbout__body
+                    .hAbout__widget
+                        .hAbout__widget__inner
+                            .hAbout__widget__desc Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
+                            .hAbout__widget__num
+                                span 27
+                                small Years
+                            .hAbout__widget__footer
+                                a.btn.btn-outline-light(href="#" title="Read more") Read more
+                    .hAbout__content
+                        #aboutmap.hAbout__map
+            // End Pane
+            #about-team.tab-pane.fade(role='tabpanel', aria-labelledby='about-team-tab')
+                .hAbout__body
+                    .hAbout__widget
+                        .hAbout__widget__inner
+                            .hAbout__widget__desc Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
+                            .hAbout__widget__num
+                                span 300
+                                small People
+                            .hAbout__widget__footer
+                                a.btn.btn-outline-light(href="#" title="Read more") Read more
+                    .hAbout__content
+                        blockquote.hAbout__quote
+                            p  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
+            // End Pane
+
+        // End tab content
+// End About Section

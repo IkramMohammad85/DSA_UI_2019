@@ -1,0 +1,355 @@
+.hAsiapedia{
+    background: #2B446C;
+    padding: 40px 0 70px;
+
+    &__nav {
+        max-width: 306px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+
+        &__inner {
+            padding-right: 25px;
+        }
+
+        &__item {
+            position: relative;
+            margin-bottom: 10px;
+            cursor: pointer;
+            opacity: 0.5;
+            @include transition();
+
+            &__img {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                
+                &:after {
+                    content: "";
+                    display: block;
+                    padding-top: percentage(143/280);
+                }
+
+                &.video {
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: em(30);
+                        height: em(30);
+                        z-index: 2;
+                        background: {
+                            position: center;
+                            repeat: no-repeat;
+                            size: 100% auto;
+                            image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Cg id='play-button_3_' data-name='play-button (3)' transform='translate(-740.586 -185.586)'%3E%3Cpath id='Path_642' data-name='Path 642' d='M224.137,168.956,205.1,181.979a1.464,1.464,0,0,1-2.3-1.212V154.722a1.461,1.461,0,0,1,2.3-1.212l19.04,13.022A1.465,1.465,0,0,1,224.137,168.956ZM205.746,157.5V177.99L220.7,167.744Z' transform='translate(565.358 52.841)' fill='%23d3dbe0'/%3E%3Cpath id='Path_643' data-name='Path 643' d='M46,81A35,35,0,1,1,81,46,35.038,35.038,0,0,1,46,81Zm0-67.014A32.014,32.014,0,1,0,78.014,46,32.045,32.045,0,0,0,46,13.986Z' transform='translate(729.586 174.586)' fill='%23d3dbe0'/%3E%3C/g%3E%3C/svg%3E%0A");
+                        }
+                    }
+                }
+            }
+
+            &__cat {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: em(11);
+                color: $white;
+                font-weight: 600;
+                line-height: (14/11);
+                padding: em(5,11) em(10, 11);
+                text-transform: uppercase;
+                background: $bluedark;
+                display: block;
+                z-index: 1;
+            }
+
+            &__title {
+                background: $white;
+                font-size: em(12);
+                margin: 0;
+                padding: 1em;
+                line-height: (18/12);
+                font-weight: 400;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &.active {
+                opacity: 1;
+                cursor: default;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        // Scroll
+        .simplebar-track{
+            &.vertical {
+                width: 1px;
+                background: rgba($white, .3);
+                right: em(3);
+                pointer-events: inherit;
+    
+                .simplebar-scrollbar{
+                    width: em(7);
+                    right: em(-3);
+                    border-radius: em(4);
+                    background: rgba($white, .6);
+                    cursor: grabbing;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+            &.horizontal {
+                display: none;
+            }
+        }
+    }
+
+    &__slide {
+        > .hAsiapedia__slide__item ~ .hAsiapedia__slide__item {
+            display: none;
+        }
+        &__item {
+            position: relative;
+            @include transition();
+
+            &__img {
+                display: block;
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    @include transition();
+                }
+                
+                &:after {
+                    content: "";
+                    display: block;
+                    padding-top: percentage(400/780);
+                }
+
+
+                &.video {
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: em(70);
+                        height: em(70);
+                        z-index: 2;
+                        background: {
+                            position: center;
+                            repeat: no-repeat;
+                            size: 100% auto;
+                            image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Cg id='play-button_3_' data-name='play-button (3)' transform='translate(-740.586 -185.586)'%3E%3Cpath id='Path_642' data-name='Path 642' d='M224.137,168.956,205.1,181.979a1.464,1.464,0,0,1-2.3-1.212V154.722a1.461,1.461,0,0,1,2.3-1.212l19.04,13.022A1.465,1.465,0,0,1,224.137,168.956ZM205.746,157.5V177.99L220.7,167.744Z' transform='translate(565.358 52.841)' fill='%23d3dbe0'/%3E%3Cpath id='Path_643' data-name='Path 643' d='M46,81A35,35,0,1,1,81,46,35.038,35.038,0,0,1,46,81Zm0-67.014A32.014,32.014,0,1,0,78.014,46,32.045,32.045,0,0,0,46,13.986Z' transform='translate(729.586 174.586)' fill='%23d3dbe0'/%3E%3C/g%3E%3C/svg%3E%0A");
+                        }
+                    }
+                }
+
+                
+            }
+
+            &__cat {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: em(14);
+                color: $white;
+                font-weight: 600;
+                line-height: (18/14);
+                padding: em(11,14) em(20, 14);
+                text-transform: uppercase;
+                background: $bluedark;
+                display: block;
+                z-index: 1;
+            }
+
+            &__content {
+                background: $white;
+                padding: 20px;
+            }
+
+            &__title {
+                font-size: em(20);
+                margin: 0;
+                line-height: (26/20);
+                margin-bottom: em(8, 20);
+                
+                a:not(:hover) {
+                    color: inherit;
+                }
+            }
+
+            &__desc {
+                line-height: (24/16);
+            }
+
+            &__more {
+                margin-top: 1em;
+                line-height: (18/12);
+                font-family: $font-family-head;
+                font-size: em(12);
+                text-transform: uppercase;
+                font-weight: 700;
+                text-align: right;
+
+                a {
+                    display: inline-block;        
+                    padding-right: em(16, 12);
+                    padding-top: em(1, 12);
+                    background: {
+                        position: right center;
+                        repeat: no-repeat;
+                        size: em(5, 12) auto;
+                        image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='4.518' height='8.205' viewBox='0 0 4.518 8.205'%3E%3Cpath id='Chevron_Right' d='M58.511,4.4l-3.69,3.689a.414.414,0,1,1-.587-.585l3.4-3.4-3.4-3.4a.414.414,0,1,1,.587-.586l3.69,3.689A.418.418,0,0,1,58.511,4.4Z' transform='translate(-54.113 -0.001)'/%3E%3C/svg%3E%0A");
+                    }
+        
+
+                    &:not(:hover) {
+                        color: inherit;
+                    }
+                }
+            }
+
+            &:hover {
+                .hAsiapedia__slide__item__img img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .slick-dots {
+            list-style: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;  
+
+            li {
+                display: block;
+                cursor: pointer;
+                position: relative;
+                width: 1.875em;
+                height: 1.875em;
+
+                &::before,
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 50%;
+                    margin: auto;
+                    width: em(14);
+                    height: em(14);
+                    @include transition();
+                }
+
+                &:before{
+                    background: rgba($white, 0.5);
+                }
+
+                &:after {
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                }
+
+                &.slick-active {
+                    &:before {
+                        background: $white;
+                    }
+
+                    &:after {
+                        width: 100%;
+                        height: 100%;
+                        border-color: rgba($white, 0.35);
+                    }
+                }
+            }
+
+            button {
+                width: em(30);
+                height: em(30);
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 40px 0 40px;
+
+        .row > div:first-child {
+            order: 12;
+        }
+
+        &__slide {
+            padding-bottom: 60px;
+            position: relative;
+        }
+
+        &__nav {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 30px 0 30px;
+
+        .row > div:first-child {
+            order: 12;
+        }
+        &__slide {
+            padding-bottom: 50px;
+            position: relative;
+        }        
+    }
+
+    @include media-breakpoint-down(xs) {
+        padding: 30px 0 20px;
+
+        &__slide {
+            padding-bottom: 50px;
+        }
+    }
+}

@@ -1,2 +1,11 @@
-# DSA_UI_2019
-DSA
+## Commands
+
+  * ### Instalation
+      ```
+      npm install
+      ```
+
+  * ### Build and watch for development
+      ```
+      yarn start
+      ```

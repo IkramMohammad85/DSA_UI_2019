@@ -1,0 +1,94 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "Dezan shira"
+
+block content
+    .container.py-5
+        h2#headings Headings
+        p
+            | All HTML headings, 
+            code.highlighter-rouge h1
+            |  through 
+            code.highlighter-rouge h6
+            | , are available.
+        table
+            thead
+                tr
+                    th Heading
+                    th Example
+            tbody
+                tr
+                    td
+                        p
+                            code.highlighter-rouge h1
+                    td
+                        span.h1 h1. Bootstrap heading
+                tr
+                    td
+                        p
+                            code.highlighter-rouge h2
+                    td
+                        span.h2 h2. Bootstrap heading
+                tr
+                    td
+                        p
+                            code.highlighter-rouge h3
+                    td
+                        span.h3 h3. Bootstrap heading
+                tr
+                    td
+                        p
+                            code.highlighter-rouge h4
+                    td
+                        span.h4 h4. Bootstrap heading
+                tr
+                    td
+                        p
+                            code.highlighter-rouge h4
+                    td
+                        span.h5 h5. Bootstrap heading
+                tr
+                    td
+                        p
+                            code.highlighter-rouge h6
+                    td
+                        span.h6 h6. Bootstrap heading
+        
+       
+        h3.mt-5.mb-4#customizing-headings Customizing headings
+
+        
+        h2.heading
+            | Asiapedia
+        
+        hr 
+        .heading-wrap
+            h2.heading
+                | Asiapedia
+                small Business resources for unlocking the Asian market
+            a.btn.btn-primary(href="#" title="Show all Resources") Show all Resources
+
+
+        h2#button Buttons
+
+        .bd-example.my-4
+            +btn-primary('Primary')
+            +btn-secondary('Secondary')
+            +btn-success('Success')
+            +btn-danger('Danger')
+            +btn-warning('Warning')
+            +btn-info('Info')
+            +btn-light('Light')
+            +btn-dark('Dark')
+            +btn-link('Link')
+
+        .bd-example
+            +btn-outline-primary('Primary') 
+            +btn-outline-secondary('Secondary') 
+            +btn-outline-success('Success') 
+            +btn-outline-danger('Danger') 
+            +btn-outline-warning('Warning') 
+            +btn-outline-info('Info') 
+            +btn-outline-light('Light') 
+            +btn-outline-dark('Dark')

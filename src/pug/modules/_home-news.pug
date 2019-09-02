@@ -1,0 +1,80 @@
+section.hNews
+    .container
+        .heading-wrap
+            h2.heading
+                | Recent News
+            a.btn.btn-outline-primary(href="https://www.dezshira.com/updates" title="Show all News") Show all News
+        -
+            var news = [
+                {title:'Rohit Kapur Discusses Indian Business Structures with Quebec Bureau and HEC Montreal',  img:'1.png', date:'Jan 11, 2019'},
+                {title:'Daisy Zang Presents at Vietnam Investment Conference in Guangzhou',                     img:'2.png', date:'Jan 11, 2019'},
+                {title:'Dezan Shira & Associates Milan Meets with International Incubator TusStar',             img:'3.png', date:'Jan 11, 2019'},
+                {title:'Trade War - How to Ensure Your Business is Not a Trade War Casualty',                   date:'Jan 11, 2019'},
+                {title:'Alberto Vettoretti Attends IRGlobal Conference and GMC Master',                         date:'Jan 11, 2019'},
+                {title:'Dezan Shira & Associates partners with the Australia China Emerging Leaders Summit',    date:'Jan 11, 2019'},
+            ]
+        .row
+            .col-xl-9
+                .hNews__hot
+                    each n in news
+                        unless !n.img
+                            .hNews__item
+                                .hNews__item__inner
+                                    a.hNews__item__img(href="#")
+                                        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src= imgPath + "news/" + n.img, alt=n.title)
+                                    .hNews__item__body
+                                        h3.hNews__item__title: a(href="#" title=n.title)= n.title
+                                        .hNews__item__footer
+                                            span.hNews__item__date= n.date
+                                            a.hNews__item__more(href="#" title="Read more") Read more
+                            // End item
+                // End hot
+            
+            .col-xl-3
+                .hNews__more
+                    each n in news
+                        unless n.img
+                            .hNews__item
+                                h3.hNews__item__title: a(href="#" title=n.title)= n.title
+                                .hNews__item__footer
+                                    span.hNews__item__date= n.date
+                            // End item
+                // End More
+
+        .hNews__tweet
+            .hNews__tweet__inner
+                .hNews__tweet__item
+                    .hNews__tweet__cont Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    .hNews__tweet__item__footer
+                        strong Follow our story: 
+                        a(href="#") #Asiapedia
+                        a(href="#") #DSAnetworking
+                        a(href="#") #DSAteam
+
+        .hNews__connect
+            -
+                var connect = [
+                    {title:'twitter', img:'twitter', url:'#'},
+                    {title:'linkedin', img:'linkedin', url:'#'},
+                    {title:'facebook', img:'facebook', url:'#'},
+                    {title:'wechat', img:'wechat', url:'#'},
+                ]
+            .row
+                each c in connect
+                    .col-6.col-lg-3
+                        .hNews__connect__item 
+                            .hNews__connect__item__icon
+                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src= imgPath + "news/ic-" + c.img + ".svg", alt=c.title)
+                            .hNews__connect__item__cont
+                                h3.hNews__connect__item__title= c.title
+                                if c.title == 'twitter'
+                                    a.btn.btn-outline-dark.btn-twitter(href=c.url) FOLLOWING
+                                else if c.title == 'linkedin'
+                                    a.btn.btn-outline-dark.btn-linkedin(href=c.url) Connect
+                                else if c.title == 'facebook'
+                                    a.btn.btn-outline-dark.btn-facebook(href=c.url) Like
+                                else 
+                                    a.btn.btn-outline-dark.btn-wechat(href=c.url) FOLLOW
+// End News
+|
+|

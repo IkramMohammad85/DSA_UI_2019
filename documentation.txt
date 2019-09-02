@@ -1,0 +1,48 @@
+# 1. Source code
+
+```
+    assets/
+    ├── css/
+    │   └── style.css
+    ├── fonts/
+    │   ├── *.eot
+    │   ├── *.otf
+    │   ├── *.svg
+    │   └── *.ttf
+    ├── image/
+    │   ├── *.png
+    │   ├── *.svg
+    │   └── *.jpg
+    ├── js/
+    │   ├── library.js
+    │   └── main.js
+    ├── manifest.json
+    images/
+    ├── logo.png
+    ├── *.svg
+    ├── *.jpg
+    ├── *.png
+    index.html
+    test.html
+    typography.html
+```
+
+# 2. Header:
+Start from the `<header>` tag and end with the `</header>` tag. We also create comments so you can see more clearly
+# 3. Content
+You can paste the content of the website that you want to add in between `<main class="wrap">` tag and `</main>` tag
+For example: `<main class="wrap"> Content added here. </main>`
+# 4. Footer
+Start from the `<footer>` tag and end with the `</footer>` tag. The footer also includes the section `<div class="Sticky">...</div>`
+# 5. Modal/Style/Script
+## 5.1 Modal
+Modal is need to be placed after the footer script (footer script including `<footer>...</footer>` and `<div class="Sticky">...</div>`) . 
+You can view in the `test.html` file or view it directly by following this link: view-source:http://dezanshira.3forcom.net/test.html
+## 5.2 Style
+CSS files are in `<head>` and they must be placed after your existing ones.
+You can view in the `test.html` file or view it directly by following this link : view-source:http://dezanshira.3forcom.net/test.html
+Sample ** Button ** can be reviewed here http://dezanshira.3forcom.net/typography.html
+## 5.3 Javascript
+Placed at the bottom and before `</body>` tag
+However, the `/assets/js/library.js` file must preset before all javascript files and code
+You can view in the `test.html` file or view it directly by following this link: view-source:http://dezanshira.3forcom.net/test.html

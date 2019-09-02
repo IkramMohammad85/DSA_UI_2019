@@ -1,0 +1,51 @@
+section.hAsiapedia
+    .container
+        .heading-wrap
+            h2.heading.heading--light
+                | Asiapedia
+                small Business resources for unlocking the Asian market
+            a.btn.btn-outline-light(href="https://www.dezshira.com/library" title="Show all Resources") Show all Resources
+        -
+            var asiapedia = [
+                {cat:'Video', img:'1.png', title:'Asia Vidcast: Relocating Your Business to China by Zoey Erdenebileg', desc:'Choosing the right location for your business is paramount to any market entry strategy. It is particularly prevalent in China due to the fast evolving business environment and sheer size of the market.', url:"#"},
+                {cat:'Q&A', img:'1.png', title:'Comparing the Different Distribution Models in Vietnam', desc:'Choosing the right location for your business is paramount to any market entry strategy. It is particularly prevalent in China due to the fast evolving business environment and sheer size of the market.', url:"#"},
+                {cat:'INFOGRAPHIC', img:'1.png', title:'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.', desc:'Choosing the right location for your business is paramount to any market entry strategy. It is particularly prevalent in China due to the fast evolving business environment and sheer size of the market.', url:"#"},
+                {cat:'Video', img:'1.png', title:'Asia Vidcast: Relocating Your Business to China by Zoey Erdenebileg', desc:'Choosing the right location for your business is paramount to any market entry strategy. It is particularly prevalent in China due to the fast evolving business environment and sheer size of the market.', url:"#"}
+            ]
+        .row
+            .col-lg-4
+                .hAsiapedia__nav.scroll-ui(data-simplebar-auto-hide="false")
+                    .hAsiapedia__nav__inner
+                        each a, index in asiapedia
+                            -var clsItem = ''
+                            if index == ''
+                                - clsItem = 'active'
+
+                            .hAsiapedia__nav__item(class=clsItem)
+                                - var cls = ''
+                                if a.cat == 'Video'
+                                    - var cls = 'video'
+                                .hAsiapedia__nav__item__img(class=cls)
+                                    span.hAsiapedia__nav__item__cat=a.cat
+                                    img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src= imgPath + "asiapedia/" + a.img, alt=a.title)
+                                .hAsiapedia__nav__item__title= a.title
+                // End nav
+            .col-lg-8
+                .hAsiapedia__slide
+                    each a in asiapedia
+                        .hAsiapedia__slide__item
+                            - var cls = ''
+                            if a.cat == 'Video'
+                                - var cls = 'video'
+                            a.hAsiapedia__slide__item__img(href=a.url class=cls)
+                                span.hAsiapedia__slide__item__cat=a.cat
+                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src= imgPath + "asiapedia/" + a.img, alt=a.title)
+                            .hAsiapedia__slide__item__content
+                                h3.hAsiapedia__slide__item__title: a(href=a.url)= a.title
+                                .hAsiapedia__slide__item__desc= a.desc
+                                .hAsiapedia__slide__item__more
+                                    a(href=a.url title="Read more") Read more
+                
+// End Asiapedia
+|
+|

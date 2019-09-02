@@ -1,0 +1,64 @@
+footer.nfooter
+    .container
+        .nfooter__top
+            +a-btn-primary('Contact US','https://www.dezshira.com/contact')
+            .nfooter__social
+                include ../modules/_socials
+        // End nfooter Top
+        |
+        |
+        .nfooter__menu
+            .row
+                each menu, index in mainMenu
+                    if menu.key === 'locations'
+                        .col-sm-6.col-md-8
+                            h3.nfooter__menu__head
+                                a(href=menu.url title=menu.title)= menu.title 
+                            ul.row
+                                li.col-xl-12.col-md-6
+                                    ul
+                                        each li, index in menu.child
+                                            if index <= 6
+                                                li
+                                                    a(href=li.url title=li.title)=li.title
+                                // End col
+                                li.col-xl-12.col-md-6
+                                    ul
+                                        each li, index in menu.child
+                                            if index > 6
+                                                li
+                                                    a(href=li.url title=li.title)=li.title
+                                // End col
+                            // End Row
+                    else
+                        .col-sm-6.col-md-4
+                            h3.nfooter__menu__head
+                                a(href=menu.url title=menu.title)= menu.title 
+                            ul
+                                each li in menu.child
+                                    li
+                                        a(href=li.url title=li.title)=li.title
+                        // End col
+            // End Row
+        // End nfooter Menu
+        |
+        |
+        .nfooter__note
+            p 
+                | Dezan Shira & Associates is a pan-Asia, multi-disciplinary professional services firm, providing legal, tax and operational advisory to international corporate investors. Operational throughout China, ASEAN and India, our 
+                | mission is to guide foreign companies through Asia’s complex regulatory environment and assist them with all aspects of establishing, maintaining and growing their business operations in the region. With more than 25 
+                | years of on-the-ground experience and a large team of lawyers, tax experts and auditors, in addition to researchers and business analysts, we are your partner for growth in Asia.
+        // End nfooter Note
+        |
+        |
+        .nfooter__copyright
+            .fcopyright © 1992-2019 Dezan Shira & Associates All Rights Reserved.
+            ul.links
+                li
+                    a(href='https://www.dezshira.com/terms-of-use.html') Terms of Use 
+                li
+                    a(href='https://www.dezshira.com/privacy-policy.html') Privacy Policy
+        // End nfooter Copyright
+// End nfooter
+
+include ../modules/_sticky

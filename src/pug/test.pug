@@ -1,0 +1,1073 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "Dezan shira"
+
+block styles
+    // Style dezshira - old
+    style(type='text/css').
+        svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1em}.svg-inline--fa.fa-stack-2x{height:2em;width:2em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}
+    link(href='//www.india-briefing.com/themes/ib/css/bundle.css', rel='stylesheet')
+    link(href='https://www.dezshira.com/themes/dsa/css/fontawesome-all.min.css', rel='stylesheet')
+    link(href='https://www.dezshira.com/themes/dsa/css/bundle.css', rel='stylesheet')
+    link(href='https://www.dezshira.com/themes/dsa/css/owl.carousel.min.css', rel='stylesheet')
+    link(href='https://www.dezshira.com/themes/dsa/css/jquery.material.form.css', rel='stylesheet')
+    // End Style dezshira - old
+
+block content
+    // Start Content
+    section.TopBanner.TopInnerBanner
+        img(alt='', src='https://www.dezshira.com/themes/dsa/images/services/banner-business-intelligence-solutions.jpg')
+        .BannerCaption
+            .container
+                .row
+                    .col-sm-12.col-md-10.col-lg-10.col-md-offset-1.col-lg-offset-1.text-center
+                        h1.text-center Business Intelligence
+                        p.text-center
+                            | Business intelligence is a critical component of the decision making process when considering where and how an investment into Asia should be made. Our pan-Asia team can help your business with its strategic direction.
+                        a.btn.btn-lg.btn-outline.lightBlue-btn(href='#mini_contact_form') Contact us for more information
+
+    section.breadcrumb
+        .container
+            ul
+                li
+                    a(href='https://www.dezshira.com/services') Services
+                li Business Intelligence
+    
+    section#innerPage.push
+        .container
+            .row
+                .col-sm-3.col-md-3.col-lg-3
+                    .leftBlockSection
+                        h4.section-title
+                            a(href='#') Our services
+                        #sidebarnav.block.no-padding
+                            ul.collapsible
+                                li.level2.active
+                                    a.main-menu(href='https://www.dezshira.com/services/business-intelligence-solutions') Business Intelligence
+                                li.level2
+                                    a.main-menu(href='https://www.dezshira.com/services/business-advisory') Corporate Establishment and Structuring
+                                li.level2
+                                    a.main-menu(href='https://www.dezshira.com/services/legal-financial-due-diligence') Due Diligence
+                                li.level2
+                                    a.main-menu(href='https://www.dezshira.com/services/accounting-reporting') Accounting
+                                li.level2
+                                    a.main-menu(href='https://www.dezshira.com/services/payroll-human-resource-administration') HR and Payroll
+                                li.level2
+                                    a.main-menu(href='https://www.dezshira.com/services/tax') Tax
+                                li.level2
+                                    a.main-menu(href='https://www.dezshira.com/services/audit-financial-review') Audit and Risk Advisory
+                                li.level2
+                                    a.main-menu(href='https://www.dezshira.com/services/information-technology-solutions') Technology
+                                li.level2
+                                    a.main-menu(href='https://www.dezshira.com/services/outbound-direct-investment') Outbound Direct Investment
+                .col-sm-5.col-md-6.col-lg-6
+                    p
+                        | Asia’s relentless economic growth and diverse range of economies present amazing opportunities for foreign investment. Foreign companies exploring opportunities in the region can, however, become exposed to shifting costs, complex regulatory requirements, and conflicting information.
+                    p
+                        | Dezan Shira & Associates’ Business Intelligence professionals have a deep understanding of market entry across Asia, as well as strong connections with local suppliers, distributors, and industrial zones. Dezan Shira’s Business Intelligence solutions provide investors with the tools to clarify their options and the means to capitalize on opportunities across Asia.
+                    p
+                    p
+                        strong Market Research
+                    p
+                        | Our Market research solutions quantify opportunities in specific industries, clarify regulatory requirements for individual business lines, and help companies to better understand their long-term costs in new markets.
+                    ul
+                        li Industry Trend and Sizing Analysis
+                        li Regulatory and Licensing Compliance
+                        li Salary Benchmarking
+                        li Consumer Segmentation and Preferences
+                    p
+                    p
+                        strong Market Entry Strategy
+                    p
+                        | Our Market Selection and Entry Strategy advisory helps companies to choose a market, method for incorporation, and supply chain structure that meets the needs of their local and regional operations.
+                    ul
+                        li Cross Country Competitiveness Benchmarking
+                        li Tariff and Supply Chain Engineering
+                        li Corporate Structuring Analysis
+                        li Comprehensive Entry Strategy Development
+                    p
+                    p
+                        strong Business Matchmaking
+                    p
+                        | Our Business Matchmaking service profiles, qualifies, and connects foreign companies to local suppliers, distributors, customers, and M&A targets.
+                    ul
+                        li Target Identification
+                        li Candidate Qualification
+                        li Meeting Setup
+                        li Translation Support
+                    p
+                    p
+                        strong Location Analysis and Site Selection
+                    p
+                        | Our Location Analysis and Site Selection service zeros in on optimal geographies for investment, profiles special economic zones, and supports companies during visits to individual sites.
+                    ul
+                        li Cross Regional Cost Comparison
+                        li Infrastructure Quality Analysis
+                        li Industrial Zone Identification and Benchmarking
+                        li Site Visit Support
+                    ul.list-inline
+                        li
+                            a.btn.btn-lg.btn-outline.margin25Top(href='https://www.dezshira.com/services') < Back To Services 
+                        li
+                            a.btn.btn-lg.btn-outline.blue-btn.margin25Top(href='https://www.dezshira.com/contact', target='_blank') CONTACT US
+                    br(style='clear:both;')
+                    br(style='clear:both;')
+                    h4.section-title
+                        a(href='#') SPECIALIST
+                    ul.box-list-style.bottom-border-list
+                        li
+                            a(href='https://www.dezshira.com/personnel/maxfield-brown.html')
+                                img.img-circle.img-thumbnail.pull-left.marginRight30(src='//www.asiabriefing.com/site-mgmt-v2/new/userfiles/personnel/max-brown-headshot.jpg', alt='Maxfield Brown', width='120', height='120')
+                            .social_media.pull-right
+                                a.marginleft(href='mailto:maxfield.brown@dezshira.com')
+                                    svg.svg-inline--fa.fa-envelope.fa-w-16(aria-hidden='true', data-prefix='far', data-icon='envelope', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512', data-fa-i2svg='')
+                                        path(fill='currentColor', d='M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z')
+                                    // <i class="far fa-envelope"></i>
+                            .name
+                                a(href='https://www.dezshira.com/personnel/maxfield-brown.html')
+                                    | Maxfield Brown
+                            .duration
+                                p(style='line-height:20px;')
+                                    | Manager
+                                    br
+                                    | Business Intelligence
+                            // <div class="country">Ho Chi Minh City</div>
+                            .clearfix
+                        li
+                            a(href='https://www.dezshira.com/personnel/koushan-das.html')
+                                img.img-circle.img-thumbnail.pull-left.marginRight30(src='//www.asiabriefing.com/site-mgmt-v2/new/userfiles/personnel/Koushan_Das.jpg', alt='Koushan Das', width='120', height='120')
+                            .social_media.pull-right
+                                a.marginleft(href='mailto:koushan.das@dezshira.com')
+                                    svg.svg-inline--fa.fa-envelope.fa-w-16(aria-hidden='true', data-prefix='far', data-icon='envelope', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512', data-fa-i2svg='')
+                                        path(fill='currentColor', d='M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z')
+                                    // <i class="far fa-envelope"></i>
+                            .name
+                                a(href='https://www.dezshira.com/personnel/koushan-das.html')
+                                    | Koushan Das
+                            .duration
+                                p(style='line-height:20px;')
+                                    | Assistant Manager
+                                    br
+                                    | Business Intelligence
+                            // <div class="country">Delhi</div>
+                            .clearfix
+                        li
+                            a(href='https://www.dezshira.com/personnel/lucy-lu.html')
+                                img.img-circle.img-thumbnail.pull-left.marginRight30(src='//www.asiabriefing.com/site-mgmt-v2/new/userfiles/personnel/Lucy_Lu200200.jpg', alt='Lucy Lu', width='120', height='120')
+                            .social_media.pull-right
+                                a.marginleft(href='mailto:lucy.lu@dezshira.com')
+                                    svg.svg-inline--fa.fa-envelope.fa-w-16(aria-hidden='true', data-prefix='far', data-icon='envelope', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512', data-fa-i2svg='')
+                                        path(fill='currentColor', d='M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z')
+                                    // <i class="far fa-envelope"></i>
+                            .name
+                                a(href='https://www.dezshira.com/personnel/lucy-lu.html')
+                                    | Lucy Lu
+                            .duration
+                                p(style='line-height:20px;')
+                                    | Assistant Manager
+                                    br
+                                    | Business Intelligence
+                            // <div class="country">Beijing</div>
+                            .clearfix
+                // /col
+                .col-sm-4.col-md-3.col-lg-3
+                    .rightBlockSection
+                        .contactBlockSmall
+                            .BannerCaption
+                                h3 To learn more about how we can support you, contact one of our local experts.
+                                p
+                                    | We provide professional services tailored to Asia´s business environment across the full business cycle.
+                                a.btn.btn-lg.btn-outline.whiteOutLine-btn(href='https://www.dezshira.com/personnel') Talk to experts 
+                        .blueBg.margin20Top
+                            .BannerCaption.min
+                                a(href='https://www.dezshira.com/brochure')
+                                    img(alt='', src='https://www.dezshira.com/themes/dsa/images/icons/Download.png', srcset='https://www.dezshira.com/themes/dsa/images/icons/Download@2x.png 2x')
+                                h3
+                                    a(href='https://www.dezshira.com/brochure') DOWNLOAD BROCHURE
+                                p
+                                    a(href='https://www.dezshira.com/brochure')
+                                        | Get access to our Asiapedia resource, magazines and guides, as well as our monthly newsletter
+                        .asiapedia.flyersBrochures
+                            .ThumbBlock.hoverImage
+                                figure
+                                    img(src='https://www.dezshira.com/themes/dsa/images/brochures/business-intelligence-solutions.jpg', itemprop='image')
+                            .eventBody
+                                h4
+                                    a(title='Corporate Establishment stricturing', href='#') Business Intelligence
+                            .downloadflyersBrochures
+                                ul.list-unstyled
+                                    li
+                                        a(href='https://www.dezshira.com/brochure_download_status/services~BI', target='_blank')
+                                            span Location Analysis and Site
+                                            svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20.pull-right(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                                path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                            // <i class="fas fa-cloud-download-alt pull-right"></i>
+                            .seeMoreLink
+                                a(href='https://www.dezshira.com/brochure', target='_blank') SEE MORE >
+                        // /flyersBrochures
+                        a(name='mini_contact_form')
+            // /col
+            // /row
+
+    section.contact.greydark
+        .container
+            .row
+                .col-sm-2.col-md-2.col-lg-2.col-sm-offset-1.col-md-offset-1.col-lg-offset-1.text-right
+                    svg.svg-inline--fa.fa-envelope.fa-w-16(style='font-size: 70px;', aria-hidden='true', data-prefix='far', data-icon='envelope', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512', data-fa-i2svg='')
+                        path(fill='currentColor', d='M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z')
+                    // <i class="far fa-envelope" style="font-size:70px;"></i>
+                .col-sm-7.col-md-7.col-lg-7
+                    h5 CONTACT US
+                    h4 Ask a question
+            form#contact_form.material.signup.marginTop(method='post', action='https://www.dezshira.com/submit_mini_contact')
+                input(type='hidden', name='dsa_contact_token', value='a5c059ac359b287fda676aa0a6ad2bb62a4f89dae74175c650cabffe5f0ada15')
+                input(type='hidden', name='request_uri', value='https://www.dezshira.com/services/business-intelligence-solutions')
+                input(type='hidden', name='to', value='info@dezshira.com')
+                #loading(style='display:none;')  Processing, please wait...
+                .row.row_2
+                    .col-md-3.col-md-offset-1
+                        input#fname(type='text', name='fname', placeholder='* First Name', required='')
+                        .helper.error_fname
+                    .col-md-3
+                        input#lname(type='text', name='lname', placeholder='* Last Name', required='')
+                        .helper.error_lname
+                    .col-md-4
+                        input#email_address(type='email', name='email_address', placeholder='* Email', required='')
+                        .helper.error_email_address
+                .row.row_2
+                    .col-md-4.col-md-offset-1
+                        .material-select
+                            select#country(name='country', placeholder='* Country', required='')
+                                option.text-muted(value='') * Country
+                                option(value='Afghanistan, Islamic State') Afghanistan, Islamic State
+                                option(value='Åland Islands') Åland Islands
+                                option(value='Albania') Albania
+                                option(value='Algeria') Algeria
+                                option(value='American Samoa') American Samoa
+                                option(value='Andorra, Principality of') Andorra, Principality of
+                                option(value='Angola') Angola
+                                option(value='Anguilla') Anguilla
+                                option(value='Antarctica') Antarctica
+                                option(value='Antigua and Barbuda') Antigua and Barbuda
+                                option(value='Argentina') Argentina
+                                option(value='Armenia') Armenia
+                                option(value='Aruba') Aruba
+                                option(value='Australia') Australia
+                                option(value='Austria') Austria
+                                option(value='Azerbaijan') Azerbaijan
+                                option(value='Bahamas') Bahamas
+                                option(value='Bahrain') Bahrain
+                                option(value='Bangladesh') Bangladesh
+                                option(value='Barbados') Barbados
+                                option(value='Belarus') Belarus
+                                option(value='Belgium') Belgium
+                                option(value='Belize') Belize
+                                option(value='Benin') Benin
+                                option(value='Bermuda') Bermuda
+                                option(value='Bhutan') Bhutan
+                                option(value='Bolivia') Bolivia
+                                option(value='Bosnia-Herzegovina') Bosnia-Herzegovina
+                                option(value='Botswana') Botswana
+                                option(value='Bouvet Island') Bouvet Island
+                                option(value='Brazil') Brazil
+                                option(value='British Indian Ocean Terr.') British Indian Ocean Terr.
+                                option(value='Brunei Darussalam') Brunei Darussalam
+                                option(value='Bulgaria') Bulgaria
+                                option(value='Burkina Faso') Burkina Faso
+                                option(value='Burundi') Burundi
+                                option(value='Cambodia, Kingdom of') Cambodia, Kingdom of
+                                option(value='Cameroon') Cameroon
+                                option(value='Canada') Canada
+                                option(value='Cape Verde') Cape Verde
+                                option(value='Cayman Islands') Cayman Islands
+                                option(value='Central African Republic') Central African Republic
+                                option(value='Chad') Chad
+                                option(value='Chile') Chile
+                                option(value='China') China
+                                option(value='Taiwan') Taiwan
+                                option(value='Christmas Island') Christmas Island
+                                option(value='Cocos (Keeling) Islands') Cocos (Keeling) Islands
+                                option(value='Colombia') Colombia
+                                option(value='Comoros') Comoros
+                                option(value='Congo') Congo
+                                option(value='Cook Islands') Cook Islands
+                                option(value='Costa Rica') Costa Rica
+                                option(value='Croatia') Croatia
+                                option(value='Cuba') Cuba
+                                option(value='Curaçao') Curaçao
+                                option(value='Cyprus') Cyprus
+                                option(value='Czech Republic') Czech Republic
+                                option(value='Congo, Democratic Republic') Congo, Democratic Republic
+                                option(value='Denmark') Denmark
+                                option(value='Djibouti') Djibouti
+                                option(value='Dominica') Dominica
+                                option(value='Dominican Republic') Dominican Republic
+                                option(value='East Timor') East Timor
+                                option(value='Ecuador') Ecuador
+                                option(value='Egypt') Egypt
+                                option(value='El Salvador') El Salvador
+                                option(value='Equatorial Guinea') Equatorial Guinea
+                                option(value='Eritrea') Eritrea
+                                option(value='Estonia') Estonia
+                                option(value='Ethiopia') Ethiopia
+                                option(value='Falkland Islands') Falkland Islands
+                                option(value='Faroe Islands') Faroe Islands
+                                option(value='Fiji') Fiji
+                                option(value='Finland') Finland
+                                option(value='France') France
+                                option(value='French Guyana') French Guyana
+                                option(value='French Polynesia') French Polynesia
+                                option(value='French Southern Territories') French Southern Territories
+                                option(value='Gabon') Gabon
+                                option(value='Gambia') Gambia
+                                option(value='Georgia') Georgia
+                                option(value='Germany') Germany
+                                option(value='Ghana') Ghana
+                                option(value='Gibraltar') Gibraltar
+                                option(value='Greece') Greece
+                                option(value='Greenland') Greenland
+                                option(value='Grenada') Grenada
+                                option(value='Guadeloupe (French)') Guadeloupe (French)
+                                option(value='Guam (USA)') Guam (USA)
+                                option(value='Guatemala') Guatemala
+                                option(value='Guernsey') Guernsey
+                                option(value='Guinea') Guinea
+                                option(value='Guinea Bissau') Guinea Bissau
+                                option(value='Guyana') Guyana
+                                option(value='Haiti') Haiti
+                                option(value='Heard and McDonald Islands') Heard and McDonald Islands
+                                option(value='Holy See (Vatican City)') Holy See (Vatican City)
+                                option(value='Honduras') Honduras
+                                option(value='Hong Kong') Hong Kong
+                                option(value='Hungary') Hungary
+                                option(value='Iceland') Iceland
+                                option(value='India') India
+                                option(value='Indonesia') Indonesia
+                                option(value='Iran') Iran
+                                option(value='Iraq') Iraq
+                                option(value='Ireland') Ireland
+                                option(value='Isle of Man') Isle of Man
+                                option(value='Israel') Israel
+                                option(value='Italy') Italy
+                                option(value="Ivory Coast (Cote D'Ivoire)") Ivory Coast (Cote D'Ivoire)
+                                option(value='Jamaica') Jamaica
+                                option(value='Japan') Japan
+                                option(value='Jersey') Jersey
+                                option(value='Jordan') Jordan
+                                option(value='Kazakhstan') Kazakhstan
+                                option(value='Kenya') Kenya
+                                option(value='Kiribati') Kiribati
+                                option(value='Kuwait') Kuwait
+                                option(value='Kyrgyz Republic (Kyrgyzstan)') Kyrgyz Republic (Kyrgyzstan)
+                                option(value='Laos') Laos
+                                option(value='Latvia') Latvia
+                                option(value='Lebanon') Lebanon
+                                option(value='Lesotho') Lesotho
+                                option(value='Liberia') Liberia
+                                option(value='Libya') Libya
+                                option(value='Liechtenstein') Liechtenstein
+                                option(value='Lithuania') Lithuania
+                                option(value='Luxembourg') Luxembourg
+                                option(value='Macau') Macau
+                                option(value='Macedonia') Macedonia
+                                option(value='Madagascar') Madagascar
+                                option(value='Malawi') Malawi
+                                option(value='Malaysia') Malaysia
+                                option(value='Maldives') Maldives
+                                option(value='Mali') Mali
+                                option(value='Malta') Malta
+                                option(value='Marshall Islands') Marshall Islands
+                                option(value='Martinique') Martinique
+                                option(value='Mauritania') Mauritania
+                                option(value='Mauritius') Mauritius
+                                option(value='Mayotte') Mayotte
+                                option(value='Mexico') Mexico
+                                option(value='Micronesia') Micronesia
+                                option(value='Moldavia') Moldavia
+                                option(value='Monaco') Monaco
+                                option(value='Mongolia') Mongolia
+                                option(value='Montenegro') Montenegro
+                                option(value='Montserrat') Montserrat
+                                option(value='Morocco') Morocco
+                                option(value='Mozambique') Mozambique
+                                option(value='Myanmar') Myanmar
+                                option(value='Namibia') Namibia
+                                option(value='Nauru') Nauru
+                                option(value='Nepal') Nepal
+                                option(value='Netherlands') Netherlands
+                                option(value='New Caledonia (French)') New Caledonia (French)
+                                option(value='New Zealand') New Zealand
+                                option(value='Nicaragua') Nicaragua
+                                option(value='Niger') Niger
+                                option(value='Nigeria') Nigeria
+                                option(value='Niue') Niue
+                                option(value='Norfolk Island') Norfolk Island
+                                option(value='North Korea') North Korea
+                                option(value='Northern Mariana Islands') Northern Mariana Islands
+                                option(value='Norway') Norway
+                                option(value='Oman') Oman
+                                option(value='Other') Other
+                                option(value='Pakistan') Pakistan
+                                option(value='Palau') Palau
+                                option(value='Palestine, State of') Palestine, State of
+                                option(value='Panama') Panama
+                                option(value='Papua New Guinea') Papua New Guinea
+                                option(value='Paraguay') Paraguay
+                                option(value='Peru') Peru
+                                option(value='Philippines') Philippines
+                                option(value='Pitcairn Island') Pitcairn Island
+                                option(value='Poland') Poland
+                                option(value='Portugal') Portugal
+                                option(value='Puerto Rico') Puerto Rico
+                                option(value='Qatar') Qatar
+                                option(value='Reunion (French)') Reunion (French)
+                                option(value='Romania') Romania
+                                option(value='Russia') Russia
+                                option(value='Rwanda') Rwanda
+                                option(value='S. Georgia & S. Sandwich Is.') S. Georgia & S. Sandwich Is.
+                                option(value='Saint Barthélemy') Saint Barthélemy
+                                option(value='Saint Helena') Saint Helena
+                                option(value='Saint Kitts & Nevis Anguilla') Saint Kitts & Nevis Anguilla
+                                option(value='Saint Lucia') Saint Lucia
+                                option(value='Saint Martin') Saint Martin
+                                option(value='Saint Pierre and Miquelon') Saint Pierre and Miquelon
+                                option(value='Saint Tome (Sao Tome)') Saint Tome (Sao Tome)
+                                option(value='Saint Vincent & Grenadines') Saint Vincent & Grenadines
+                                option(value='Samoa') Samoa
+                                option(value='San Marino') San Marino
+                                option(value='Saudi Arabia') Saudi Arabia
+                                option(value='Senegal') Senegal
+                                option(value='Serbia') Serbia
+                                option(value='Seychelles') Seychelles
+                                option(value='Sierra Leone') Sierra Leone
+                                option(value='Singapore') Singapore
+                                option(value='Slovak Republic') Slovak Republic
+                                option(value='Slovenia') Slovenia
+                                option(value='Solomon Islands') Solomon Islands
+                                option(value='Somalia') Somalia
+                                option(value='South Africa') South Africa
+                                option(value='South Korea') South Korea
+                                option(value='South Sudan') South Sudan
+                                option(value='Spain') Spain
+                                option(value='Sri Lanka') Sri Lanka
+                                option(value='Sudan') Sudan
+                                option(value='Suriname') Suriname
+                                option(value='Svalbard and Jan Mayen Is.') Svalbard and Jan Mayen Is.
+                                option(value='Swaziland') Swaziland
+                                option(value='Sweden') Sweden
+                                option(value='Switzerland') Switzerland
+                                option(value='Syria') Syria
+                                option(value='Tadjikistan') Tadjikistan
+                                option(value='Tanzania') Tanzania
+                                option(value='Thailand') Thailand
+                                option(value='Togo') Togo
+                                option(value='Tokelau') Tokelau
+                                option(value='Tonga') Tonga
+                                option(value='Trinidad and Tobago') Trinidad and Tobago
+                                option(value='Tunisia') Tunisia
+                                option(value='Turkey') Turkey
+                                option(value='Turkmenistan') Turkmenistan
+                                option(value='Turks and Caicos Islands') Turks and Caicos Islands
+                                option(value='Tuvalu') Tuvalu
+                                option(value='Uganda') Uganda
+                                option(value='Ukraine') Ukraine
+                                option(value='United Arab Emirates') United Arab Emirates
+                                option(value='United Kingdom') United Kingdom
+                                option(value='United States') United States
+                                option(value='Uruguay') Uruguay
+                                option(value='USA Minor Outlying Islands') USA Minor Outlying Islands
+                                option(value='Uzbekistan') Uzbekistan
+                                option(value='Vanuatu') Vanuatu
+                                option(value='Venezuela') Venezuela
+                                option(value='Vietnam') Vietnam
+                                option(value='Virgin Islands (British)') Virgin Islands (British)
+                                option(value='Virgin Islands (USA)') Virgin Islands (USA)
+                                option(value='Wallis and Futuna Islands') Wallis and Futuna Islands
+                                option(value='Western Sahara') Western Sahara
+                                option(value='Yemen') Yemen
+                                option(value='Yugoslavia (former)') Yugoslavia (former)
+                                option(value='Zambia') Zambia
+                                option(value='Zimbabwe') Zimbabwe
+                            .helper.error_country
+                    .col-md-3
+                        input#organization(type='text', name='organization', placeholder='* Company', required='')
+                        .helper.error_organization
+                    .col-md-3
+                        input#telephone(type='text', name='telephone', placeholder='* Telephone', required='')
+                        .helper.error_telephone
+                .row.row_1
+                    .col-md-10.col-md-offset-1
+                        textarea#comments(name='comments', placeholder='* Comments', required='')
+                        .helper.error_comments
+                .row.row_1
+                    .col-md-6.col-md-offset-1
+                        .captcha_block
+                            .captcha_left_block
+                                span
+                                    | Security Check 
+                                    a#reload_captcha.btn(title='Reload Code')
+                                        i.fas.fa-sync-alt
+                                br
+                                img#siimage(src='https://www.dezshira.com/includes/modules/securimage/securimage_show_mini.php', alt='captcha image')
+                            .captcha_right_block
+                                input#captcha_code(type='text', name='captcha_code', placeholder='* Security Code', required='')
+                                .helper.error_captcha_code
+                                span The code is case-sensitive 
+                    .col-md-4
+                        input#submit.btn.btn-lg.btn-outline.lightBlue-btn.pull-right.submit_btn.btnNormalWidth(type='submit', value='SEND', name='SEND')
+                        .clearfix
+                        p.text-right.paddTopBottom(style='color:#FFFFFF;') * Required
+            br
+            #message.text-center.bg-danger.radius-none(style='max-width:800px;margin:auto; font-size:12px; line-height:normal; font-weight:normal;')
+
+
+    section.blue
+        .container
+            .row
+                .col-sm-2.col-md-2.col-lg-2.col-sm-offset-1.col-md-offset-1.col-lg-offset-1.subscrib_imgAlign
+                    a(href='https://www.dezshira.com/register.html')
+                        img(alt='', src='//www.dezshira.com/themes/dsa/images/icons/Subscribe.png', srcset='//www.dezshira.com/themes/dsa/images/icons/Subscribe@2x.png 2x')
+                .col-sm-8.col-md-8.col-lg-8
+                    h5 SUBSCRIBE
+                    h1
+                        a(href='https://www.dezshira.com/register.html')
+                            | Get access to our bookstore, Asiapedia library, and monthly update on doing business in Asia
+
+    section.mt-4
+        .container
+            h4.section-title
+                a(href='#') Asiapedia
+            .row
+                .col-lg-3.col-md-3.col-sm-6
+                    .asiapedia
+                        .ThumbBlock.hoverImage
+                            figure
+                                img.img-responsive(src='https://resource.dezshira.com/resize/650x400/Resources/8156/China-Briefing-ChinaCus-New-Negative-List-Targets-Unified-Market-Access.jpg', itemprop='image')
+                            .eventLable legal
+                            .pediashare
+                                // <a href="#"><i class="fa fa-heart"></i></a> <i class="fa fa-share-alt"></i>
+                        .eventBody
+                            h4
+                                a(title="Foreign Investment Law of the People's Republic of China", href='https://www.dezshira.com/library/legal/foreign-investment-law-china.html') Foreign Investment Law of the People's Republ...
+                            .dateTime March 2019
+                        .credit
+                            strong FREE
+                            |  | credits 0	
+                            span.L1 L1
+                // /.col-lg-3
+                .col-lg-3.col-md-3.col-sm-6
+                    .asiapedia
+                        .ThumbBlock.hoverImage
+                            figure
+                                img.img-responsive(src='https://resource.dezshira.com/resize/650x400/Resources/8151/India_Aadhaar.jpg', itemprop='image')
+                            .eventLable legal
+                            .pediashare
+                                // <a href="#"><i class="fa fa-heart"></i></a> <i class="fa fa-share-alt"></i>
+                        .eventBody
+                            h4
+                                a(title='The Aadhaar and Other Laws (Amendment) Ordinance, 2019 ', href='https://www.dezshira.com/library/legal/aadhaar-other-laws-amendment-ordinance-2019.html') The Aadhaar and Other Laws (Amendment) Ordina...
+                            .dateTime March 2019
+                        .credit
+                            strong FREE
+                            |  | credits 0	
+                            span.L1 L1
+                // /.col-lg-3
+                .col-lg-3.col-md-3.col-sm-6
+                    .asiapedia
+                        .ThumbBlock.hoverImage
+                            figure
+                                img.img-responsive(src='https://www.dezshira.com/themes/dsa/images/asiapedia/thumb-video.jpg', itemprop='image')
+                            .eventLable video
+                            .pediashare
+                                // <a href="#"><i class="fa fa-heart"></i></a> <i class="fa fa-share-alt"></i>
+                        .eventBody
+                            h4
+                                a(title="'Educated Interview' Series Featuring Chris Devonshire-Ellis", href='https://www.dezshira.com/library/video/educated-interview-series-featuring-chris-devonshire-ellis-7595.html') 'Educated Interview' Series Featuring Chris D...
+                            .dateTime March 2019
+                        .credit
+                            strong FREE
+                            |  | credits 0	
+                            span.L1 L1
+                // /.col-lg-3
+                .col-lg-3.col-md-3.col-sm-6
+                    .asiapedia
+                        .ThumbBlock.hoverImage
+                            figure
+                                img.img-responsive(src='https://resource.dezshira.com/resize/650x400/Resources/8129/edited-CB-Summary-of-Key-Changes-to-the-2018-Negative-List.jpg', itemprop='image')
+                            .eventLable infographic
+                            .pediashare
+                                // <a href="#"><i class="fa fa-heart"></i></a> <i class="fa fa-share-alt"></i>
+                        .eventBody
+                            h4
+                                a(title="Summary of Key Changes to China's 2018 Negative List ", href='https://www.dezshira.com/library/infographic/key-changes-china-2018-negative-list.html') Summary of Key Changes to China's 2018 Negati...
+                            .dateTime March 2019
+                        .credit
+                            strong FREE
+                            |  | credits 0	
+                            span.L1 L1
+                // /.col-lg-3
+                // /row
+                // /container
+
+
+    section.mt-4
+        .container
+            h4.section-title
+                a(href='#') Publications
+            .books_carousel
+                .row
+                    ul.list-inline.mraginLeftRight15
+                        li.col-sm-3.col-md-3.col-lg-3
+                            .desc
+                                h3
+                                    a(href='http://www.asiabriefing.com/store/search?language=21', target='_blank') Asia Briefing Publications
+                                p
+                                    | Download magazines and guides on doing business in China, Vietnam, ASEAN, India, and other countries in Asia.
+                                a.btn.btn-lg.btn-outline(href='http://www.asiabriefing.com/store', target='_blank')
+                                    svg.svg-inline--fa.fa-shopping-cart.fa-w-18(aria-hidden='true', data-prefix='fa', data-icon='shopping-cart', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512', data-fa-i2svg='')
+                                        path(fill='currentColor', d='M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z')
+                                    // <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    | GO TO STORE
+                        li.col-sm-9.col-md-9.col-lg-9
+                            #theCarousel.carousel.slide.multi-item-carousel
+                                .carousel-inner
+                                    .item.active
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/8059/HK_Intro_guide_2019_01_Cover.jpg', srcset='//resource.dezshira.com/Publications/8059/HK_Intro_guide_2019_01_Cover.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/introduction-doing-business-hong-kong-2019.html') An Introduction to Doing Business in Hong Kong 2019
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/introduction-doing-business-hong-kong-2019.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/8026/INDOB_2018_12_issue_Cover.jpg', srcset='//resource.dezshira.com/Publications/8026/INDOB_2018_12_issue_Cover.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/growing-opportunities-foreign-investors-indonesia-8026.html') Growing Opportunities for Foreign Investors in Indonesia
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/growing-opportunities-foreign-investors-indonesia-8026.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7995/Singapore_Intro_guide_2019_Cover.jpg', srcset='//resource.dezshira.com/Publications/7995/Singapore_Intro_guide_2019_Cover.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/an-introduction-to-doing-business-in-singapore-2019-7995.html') An Introduction to Doing Business in Singapore 2019
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/an-introduction-to-doing-business-in-singapore-2019-7995.html')") Quick View
+                                    // /item
+                                    .item
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/8026/INDOB_2018_12_issue_Cover.jpg', srcset='//resource.dezshira.com/Publications/8026/INDOB_2018_12_issue_Cover.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/growing-opportunities-foreign-investors-indonesia-8026.html') Growing Opportunities for Foreign Investors in Indonesia
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/growing-opportunities-foreign-investors-indonesia-8026.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7995/Singapore_Intro_guide_2019_Cover.jpg', srcset='//resource.dezshira.com/Publications/7995/Singapore_Intro_guide_2019_Cover.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/an-introduction-to-doing-business-in-singapore-2019-7995.html') An Introduction to Doing Business in Singapore 2019
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/an-introduction-to-doing-business-in-singapore-2019-7995.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7987/VB_2018_12_Issue_Cover_600.jpg', srcset='//resource.dezshira.com/Publications/7987/VB_2018_12_Issue_Cover_600.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/developing-your-distribution-strategy-vietnam-7987.html') Developing Your Distribution Strategy for Vietnam
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/developing-your-distribution-strategy-vietnam-7987.html')") Quick View
+                                    // /item
+                                    .item
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7995/Singapore_Intro_guide_2019_Cover.jpg', srcset='//resource.dezshira.com/Publications/7995/Singapore_Intro_guide_2019_Cover.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/an-introduction-to-doing-business-in-singapore-2019-7995.html') An Introduction to Doing Business in Singapore 2019
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/an-introduction-to-doing-business-in-singapore-2019-7995.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7987/VB_2018_12_Issue_Cover_600.jpg', srcset='//resource.dezshira.com/Publications/7987/VB_2018_12_Issue_Cover_600.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/developing-your-distribution-strategy-vietnam-7987.html') Developing Your Distribution Strategy for Vietnam
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/developing-your-distribution-strategy-vietnam-7987.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7988/ASB_2018_12_issue_Cover_600.jpg', srcset='//resource.dezshira.com/Publications/7988/ASB_2018_12_issue_Cover_600.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/export-import-procedures-asean-best-practices-7988.html') Export and Import Procedures in ASEAN: Best Practices
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/export-import-procedures-asean-best-practices-7988.html')") Quick View
+                                    // /item
+                                    .item
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7987/VB_2018_12_Issue_Cover_600.jpg', srcset='//resource.dezshira.com/Publications/7987/VB_2018_12_Issue_Cover_600.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/developing-your-distribution-strategy-vietnam-7987.html') Developing Your Distribution Strategy for Vietnam
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/developing-your-distribution-strategy-vietnam-7987.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7988/ASB_2018_12_issue_Cover_600.jpg', srcset='//resource.dezshira.com/Publications/7988/ASB_2018_12_issue_Cover_600.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/export-import-procedures-asean-best-practices-7988.html') Export and Import Procedures in ASEAN: Best Practices
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/export-import-procedures-asean-best-practices-7988.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7978/IB_2018_12_issue_Cover_600.jpg', srcset='//resource.dezshira.com/Publications/7978/IB_2018_12_issue_Cover_600.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/where-invest-india-7978.html') Where to Invest in India
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/where-invest-india-7978.html')") Quick View
+                                    // /item
+                                    .item
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7988/ASB_2018_12_issue_Cover_600.jpg', srcset='//resource.dezshira.com/Publications/7988/ASB_2018_12_issue_Cover_600.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/export-import-procedures-asean-best-practices-7988.html') Export and Import Procedures in ASEAN: Best Practices
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/export-import-procedures-asean-best-practices-7988.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7978/IB_2018_12_issue_Cover_600.jpg', srcset='//resource.dezshira.com/Publications/7978/IB_2018_12_issue_Cover_600.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/where-invest-india-7978.html') Where to Invest in India
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/where-invest-india-7978.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/8059/HK_Intro_guide_2019_01_Cover.jpg', srcset='//resource.dezshira.com/Publications/8059/HK_Intro_guide_2019_01_Cover.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/introduction-doing-business-hong-kong-2019.html') An Introduction to Doing Business in Hong Kong 2019
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/introduction-doing-business-hong-kong-2019.html')") Quick View
+                                    // /item
+                                    .item
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/7978/IB_2018_12_issue_Cover_600.jpg', srcset='//resource.dezshira.com/Publications/7978/IB_2018_12_issue_Cover_600.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/where-invest-india-7978.html') Where to Invest in India
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/where-invest-india-7978.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/8059/HK_Intro_guide_2019_01_Cover.jpg', srcset='//resource.dezshira.com/Publications/8059/HK_Intro_guide_2019_01_Cover.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/introduction-doing-business-hong-kong-2019.html') An Introduction to Doing Business in Hong Kong 2019
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/introduction-doing-business-hong-kong-2019.html')") Quick View
+                                        .col-sm-4.col-md-4.col-lg-4
+                                            .view.view-first
+                                                img(src='//resource.dezshira.com/resize/360x495/Publications/8026/INDOB_2018_12_issue_Cover.jpg', srcset='//resource.dezshira.com/Publications/8026/INDOB_2018_12_issue_Cover.jpg 2x')
+                                                .mask
+                                                    h2
+                                                        a(href='http://www.asiabriefing.com/store/book/growing-opportunities-foreign-investors-indonesia-8026.html') Growing Opportunities for Foreign Investors in Indonesia
+                                                    a.info(href='#', data-toggle='modal', data-target='#quickViewModal', onclick="bookView('http://www.asiabriefing.com/store/book-preview/growing-opportunities-foreign-investors-indonesia-8026.html')") Quick View
+                                    // /item
+                                a.left.carousel-control(href='#theCarousel', data-slide='prev')
+                                    i.angle-left
+                                        img(src='//www.dezshira.com/themes/dsa/images/angle-left.png', alt='left')
+                                a.right.carousel-control(href='#theCarousel', data-slide='next')
+                                    i.angle-right
+                                        img(src='//www.dezshira.com/themes/dsa/images/angle-right.png', alt='left')
+                        .clearfix
+                    .clearfix
+        // /container
+
+    // End Content
+
+block js
+    |
+    |
+    // Javacript dezshira - old
+    script(src='https://www.dezshira.com/themes/dsa/js/jquery.validate.min.js')
+    script(src='https://www.dezshira.com/themes/dsa/js/jquery.material.form.js')
+    script.
+        //for tooltip
+        $(document).ready(function(){
+            $('form.material').materialForm(); // Apply material
+            $('form.material').each(function(i, obj) {
+                $(this).validate({
+                errorPlacement:function(error, element) {
+                        var name = element.attr('name');	
+                }
+                }); // Apply validator with no error messages but classes only
+            });
+            $('[data-toggle="tooltip"]').tooltip(); 
+        });
+        $("div#sidebarnav ul.collapsible li a[href$='/login']").parent().addClass("active");
+        $("div#sidebarnav ul.collapsible li a[href$='/login']").parent().parents('li').addClass("active");
+        
+        
+        //mini contact form submit
+        var frm = $('form#contact_form');
+
+        frm.submit(function (e) {
+            e.preventDefault();
+            var isvalid = $("form.material").valid();
+            if (isvalid) {
+            $('#loading').show();
+            $('#message').html('<i class="fas fa-spinner"></i>');
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(),
+                success: function (data) {
+                    
+                    $('#message').removeClass("alert alert-danger alert-success");
+                    if(data=="invalid_code"){
+                        $('#message').addClass("alert alert-danger").html('Invalid Security Code.');
+                        $('#loading').hide();
+                        $("#reload_captcha").click();
+                    } else if(data=="invalid_token"){
+                        $('#message').addClass("alert alert-danger").html('Invalid Form Token.');
+                        $('#loading').hide();
+                        $("#reload_captcha").click();
+                    } else {
+                        $('#message').addClass("alert alert-success").html('Thank you for your message.');
+                        
+                        
+                        //frm.find('input, textarea').each(function(i){
+                        //	$(this).val();
+                        //});
+                        document.getElementById("contact_form").reset();
+                        $("#reload_captcha").click();
+                        $('#loading').hide();
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    $('#loading').hide();
+                    $('#message').html('Sorry, response from the POST URL is empty: <br />'+xhr.status);
+                    $("#reload_captcha").click();
+            },
+            });
+            }
+        });
+        
+            $("#reload_captcha").click(function(){
+                $("#siimage").attr("src","");
+                d = new Date();
+                $("#siimage").attr("src", "https://www.dezshira.com/includes/modules/securimage/securimage_show_mini.php?"+d.getTime());
+            });
+        
+        $("#btn_mini_contact_form").click(function() {
+            $('html, body').animate({
+                scrollTop: ($("#mini_contact_form").offset().top)-300
+            }, 2000);
+        });
+        
+        $('select#country').on('change', function() {
+            if ($(this).val()) {
+                return $(this).css('color', '#333333');
+            } else {
+                return $(this).css('color', 'gray');
+            }
+        });
+
+    script(src='https://www.dezshira.com/themes/dsa/js/bundle.js')
+    script(src='https://www.dezshira.com/themes/dsa/js/owl.carousel.min.js')
+    script.
+        //for tooltip
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        $("div#sidebarnav ul.collapsible li a[href$='/services/business-intelligence-solutions']").parent().addClass("active");
+        $("div#sidebarnav ul.collapsible li a[href$='/services/business-intelligence-solutions']").parent().parents('li').addClass("active");
+    
+    script(src='https://www.dezshira.com/themes/dsa/js/fontawesome-all.min.js')
+    script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-1909572-7', 'auto');
+        ga('send', 'pageview');
+
+            // mailto function
+            $('a[href^="mailto:"]').click(function(){
+                ga('send','event','mailto','click','email clicked');
+                return true;
+            });
+    
+    script(type='text/javascript', src='https://analytics-au.clickdimensions.com/ts.js')
+    script.
+        var cdAnalytics = new clickdimensions.Analytics('analytics-au.clickdimensions.com');
+        cdAnalytics.setAccountKey('aHzoBJhlGD02xy7dPmDtCQ');
+        cdAnalytics.setDomain('dezshira.com');
+        cdAnalytics.setScore(typeof(cdScore) == "undefined" ? 0 : (cdScore == 0 ? null : cdScore));
+        cdAnalytics.trackPage();
+        
+        window.__lo_site_id = 125015;
+        (function() {
+            var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+            wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+        })();
+
+    script(type='text/javascript').
+        if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","bam.nr-data.net","3283726c53","2874630","Z1AGZkEHD0JVVxVQWF4aMUBaSQhfUFEZF0dYRQ==",0,55,new Date().getTime(),"","","","",""]);
+
+    script(type='text/javascript', src='https://js-agent.newrelic.com/nr-100.js')
+    script(type='text/javascript', src='https://bam.nr-data.net/1/3283726c53?a=2874630&be=1001&qt=0&ap=55&dc=342&fe=550&to=Z1AGZkEHD0JVVxVQWF4aMUBaSQhfUFEZF0dYRQ%3D%3D&v=42&jsonp=NREUM.setToken&perf=%7B%22timing%22%3A%7B%22of%22%3A1552965194928%2C%20%22n%22%3A0%2C%20%22u%22%3A971%2C%20%22ue%22%3A971%2C%20%22dl%22%3A978%2C%20%22di%22%3A1342%2C%20%22ds%22%3A1342%2C%20%22de%22%3A1348%2C%20%22dc%22%3A1550%2C%20%22l%22%3A1550%2C%20%22le%22%3A1551%2C%20%22f%22%3A1%2C%20%22dn%22%3A1%2C%20%22dne%22%3A1%2C%20%22c%22%3A1%2C%20%22ce%22%3A1%2C%20%22rq%22%3A4%2C%20%22rp%22%3A958%2C%20%22rpe%22%3A967%7D%2C%20%22navigation%22%3A%7B%7D%7D')
+
+    // End Javacript dezshira - old
+
+block modal
+    |
+    |
+    // Start modal
+    #quickViewModal.modal.fade(role='dialog', tabindex='-1', aria-labelledby='gridModalLabel')
+        .modal-dialog(role='document')
+            .modal-content.radius-none
+                .modal-header.section-title
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                    h4#gridSystemModalLabel.modal-title Our Regional Publications
+                .modal-body.top-bg-contain.book-detail-bg-banner
+                    #iframeContainer
+
+    #Loginpopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-dialog.modal-md
+            .modal-content
+                .modal-header.text-center
+                    button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                    a(href='https://www.dezshira.com/library')
+                        img(alt='', src='https://www.dezshira.com/themes/dsa/images/asiapedia-logo.png', srcset='https://www.dezshira.com/themes/dsa/images/asiapedia-logo-2X.png 2x')
+                    p.text-center A place to share knowledge and better understand Asia
+                .modal-body
+                    .row
+                        .col-sm-6.col-md-6.col-lg-6
+                            h4#myModalLabel.modal-title.text-center Log In
+                            form#loginForm.padd15.padd-TopNone(action='https://www.dezshira.com/login?action=post_form', method='POST')
+                                input(type='hidden', name='dsa_login_token', value='5643e57dfd6544a0243c8b6f26f7e85c529b77080ccdd61c4209401cfe01ce58')
+                                .form-group.input-group
+                                    span.input-group-addon
+                                        svg.svg-inline--fa.fa-envelope.fa-w-16(aria-hidden='true', data-prefix='far', data-icon='envelope', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z')
+                                        // <i class="far fa-envelope"></i>
+                                    input.form-control(type='text', name='email', placeholder='email')
+                                .form-group.input-group
+                                    span.input-group-addon
+                                        svg.svg-inline--fa.fa-lock.fa-w-14(aria-hidden='true', data-prefix='fas', data-icon='lock', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 448 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z')
+                                        // <i class="fas fa-lock"></i>
+                                    input.form-control(type='password', name='password', placeholder='password')
+                                p.text-right
+                                    a(href='http://www.asiabriefing.com/customer/forgot-password')
+                                        small Forgot Password?
+                                .form-group.text-center
+                                    input.btn.btn-lg.btn-outline.blue-btn.btnNormalWidth(type='submit', value='LOGIN')
+                                .form-group.text-center
+                                    small
+                                        | Don't have an account? 
+                                        a(href='https://www.dezshira.com/register') Sign Up
+                        .col-sm-6.col-md-6.col-lg-6.greyLeftBorder
+                            .subscriptionBlock
+                                #subscriptionCarousel.carousel.slide(data-ride='carousel')
+                                    // Carousel indicators
+                                    ol.carousel-indicators
+                                        li(data-target='#subscriptionCarousel', data-slide-to='0')
+                                        li(data-target='#subscriptionCarousel', data-slide-to='1')
+                                        li(data-target='#subscriptionCarousel', data-slide-to='2')
+                                        li(data-target='#subscriptionCarousel', data-slide-to='3')
+                                    // Wrapper for carousel items
+                                    .carousel-inner
+                                        .item.next.left
+                                            h4.modal-title.text-center Publication
+                                            i.sprite.sprite-retina.icon-publications
+                                            .carousel-caption
+                                                p Download our FREE magazines and guides
+                                        .item
+                                            h4.modal-title.text-center News 
+                                            i.sprite.sprite-retina.icon-news
+                                            .carousel-caption
+                                                p
+                                                    | Stay up-to-date on breaking news, regulatory updates and Asia Briefing Publications
+                                        .item
+                                            h4.modal-title.text-center Multimedia
+                                            i.sprite.sprite-retina.icon-ksp
+                                            .carousel-caption
+                                                p Access presentations, webinars, podcasts, reports, Q&As and more
+                                        .item.active.left
+                                            h4.modal-title.text-center Dashboard
+                                            i.sprite.sprite-retina.icon-dashboard
+                                            .carousel-caption
+                                                p Track paid orders and connect with our support team
+                                    // Carousel controls
+
+    #logoDownload.modal.fade.logoDownload(role='dialog')
+        .modal-dialog
+            // Modal content
+            .modal-content
+                .modal-header
+                    button.close(type='button', data-dismiss='modal') ×
+                    a(href='https://www.dezshira.com/')
+                        img.logo.center-block.margin20Top(alt='', src='https://www.dezshira.com/themes/dsa/images/logo.png', srcset='https://www.dezshira.com/themes/dsa/images/logo-2X.png 2x')
+                .modal-body
+                    h4.section-title Dezan Shira & Associates logos
+                    table.table.table-striped
+                        tbody
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_vertical (EPS).eps', target='_blank') Dezan Shira & Associates logo_vertical(EPS)
+                                td.lightgreyColor 254KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_vertical (EPS).eps', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_vertical (PNG).png', target='_blank') Dezan Shira & Associates logo_vertical(PNG)
+                                td.lightgreyColor 14KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_vertical (PNG).png', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_horizontal (EPS).eps', target='_blank') Dezan Shira & Associates logo_horizontal(EPS)
+                                td.lightgreyColor 566KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_horizontal (EPS).eps', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_horizontal (PNG).png', target='_blank') Dezan Shira & Associates logo_horizontal(PNG)
+                                td.lightgreyColor 49KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_horizontal (PNG).png', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira Asian Alliance logo_horizontal (EPS).eps', target='_blank') Dezan Shira Asian Alliance(EPS)
+                                td.lightgreyColor 305KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira Asian Alliance logo_horizontal (EPS).eps', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira Asian Alliance logo_horizontal (PNG).png', target='_blank') Dezan Shira Asian Alliance(PNG)
+                                td.lightgreyColor 18KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira Asian Alliance logo_horizontal (PNG).png', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+
+
+    // End modal

@@ -1,0 +1,776 @@
+// Contents
+//
+// Navbar
+// Navbar brand
+// Navbar nav
+// Navbar text
+// Navbar divider
+// Responsive navbar
+// Navbar position
+// Navbar themes
+
+$top: 45;
+
+// Navbar
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap; // allow us to do the line break for collapsing content
+  justify-content: space-between; // space out brand from logo
+  background: $bluedark;
+  color: $white;
+  z-index: 10;
+  border: none !important;
+
+  // Because flex properties aren't inherited, we need to redeclare these first
+  // few properities so that content nested within behave properly.
+  > .container,
+  > .container-fluid {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    &::before,
+    &:after {
+      display: none;
+    }
+  }
+
+  &__logo {
+    &,
+    h1 {
+      font-size: 1em;
+      margin: 0;
+    }
+  }
+
+  .navbar-collapse:before,
+  &:before {
+    content: "";
+    position: absolute;
+    top: em($top);
+    left: 50%;
+    right: 0;
+    border-top: 1px solid #26394c;
+    display: block;
+    @include transition();
+  }
+
+  .navbar-collapse:before {
+    left: 0;
+  }
+
+
+  // Active scroll style
+  @include media-breakpoint-up(md) {
+    &.active {
+      .navbar-collapse:before,
+      &:before {
+        opacity: 0;
+        top: 0;
+      }
+
+      .navbar-tools {
+        opacity: 0;
+        top: em(-1*$top);
+      }
+
+      .navbar-search {
+        top: 0;
+      }
+
+      .navbar-collapse {
+        padding-top: 0;
+      }
+
+      .navbar-nav .nav-link {
+        line-height: (30/13);
+        padding-top: em(20,13);
+        padding-bottom: em(20,13)
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    &:before {
+      display: none;
+    }
+
+    .navbar-brand {
+      img {
+        height: em(28);
+      }
+    }
+  }
+}
+
+
+// Navbar brand
+//
+// Used for brand, project, or site names.
+
+.navbar-brand {
+  display: block;
+  margin-right: em(54);
+  line-height: inherit;
+  white-space: nowrap;
+  font-size: 1em;
+  height: auto;
+  padding: 0;
+  float: none;
+  
+  img {
+    height: em(35);
+    display: block;
+  }
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  @include media-breakpoint-between(md, md) {
+    margin-right: em(15);
+    img {
+      height: em(18);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-right: 10px;
+  }
+}
+
+
+// Navbar nav
+//
+// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  .nav-item {
+    margin-right: em(30);
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .nav-arrow {
+      position: relative;
+      top: em(-1, 14);
+      width: em(11.08, 14);
+      height: em(4.93, 14);
+      margin-left: em(10, 14);
+      border: none;
+      background: {
+        position: center;
+        repeat: no-repeat;
+        size: auto 100%;
+        image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='3.558' viewBox='0 0 8 3.558'%3E%3Cg id='down-arrow' transform='translate(-6.4 -33.4)' opacity='0.6'%3E%3Cpath id='Path_509' data-name='Path 509' d='M14.318,33.469a.325.325,0,0,0-.4,0L10.4,36.4,6.882,33.469a.325.325,0,0,0-.4,0,.208.208,0,0,0,0,.332L10.2,36.889a.307.307,0,0,0,.2.069.32.32,0,0,0,.2-.069L14.311,33.8A.2.2,0,0,0,14.318,33.469Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+      }
+      @include transition(all 0.2s ease);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+
+
+    .dropdown-menu {
+      @include media-breakpoint-up(md) {
+        display: block !important;
+        white-space: nowrap;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(0, 10px);
+        @include transition(all 0.1s ease);
+
+        &.row {
+          display: flex !important;
+          margin: 0;
+          min-width: em(435, 14);
+          > li {
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+
+            &:not(:last-child) {
+              &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: em(10,14);
+                right: 0;
+                bottom: em(10,14);
+                border-right: 1px solid #D8DBDD;
+              }
+            }
+          }
+        }
+      }
+
+      li {
+        a {
+          @extend .dropdown-item
+        }        
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &:hover {
+      @include media-breakpoint-up(md) {
+        .nav-arrow {
+          transform: rotateX(180deg)
+        }
+      }
+      .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    font-family: $font-family-head;
+    font-size: em(13);
+    font-weight: 400;
+    line-height: (25/13);
+    color: $white;
+    letter-spacing: 0.05em;
+    padding-top: em(15, 13);
+    padding-bottom: em(15, 13);
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: rgba($white, 0.8);
+    }
+  }
+
+  .dropdown-menu {
+    position: static;
+    float: none;
+  }
+
+  @include media-breakpoint-between(lg, lg) {
+    .nav-item {
+      margin-right: em(10);
+    }
+    .nav-link {
+      font-size: em(11);
+      line-height: (25/11);
+    }
+
+    .nav-arrow {
+      font-size: em(11);
+    }
+  }
+
+  @include media-breakpoint-between(md, md) {
+    .nav-item {
+      margin-right: em(8);
+    }
+    .nav-link {
+      font-size: em(10);
+      line-height: (25/10);
+    }
+
+    .nav-arrow {
+      font-size: em(10);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    max-width: 520px;
+    margin: 0 auto;
+    padding-top: 10px;
+
+    .nav-item {
+      margin: 0;
+      display: block;
+
+      .nav-arrow {
+        margin: 0;
+        position: absolute; right: 0;
+        top: 6px;  
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        // background-color: rgba($white, 0.6);
+        background-size: 10px auto;
+        background-position: center;
+      }
+
+      .dropdown-menu {
+        background: transparent;
+        padding-top: 0;
+        box-shadow: none;
+        color: $white;
+
+        li[class*="col-"] {
+          padding: 0;
+        }
+
+        li a {
+          color: rgba($white, 0.8);
+        }
+      }
+
+      &.active {
+        .nav-arrow {
+          transform: rotateX(180deg)
+        }
+      }
+    }
+
+    .nav-link {
+      line-height: (22/13);
+      padding-top: em(10, 13);
+      padding-bottom: em(10, 13);
+    }
+  }
+}
+
+.navbar-tools {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: em(6) 0;
+  @include transition();
+
+  &__item {
+    margin-right: em(20);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    > a {
+      font-size: em(14);
+      color: rgba($white, 0.6);
+      line-height: (23/14);
+      padding-top: em(($top - 23 - 12 + 1)/2, 14);
+      padding-bottom: em(($top - 23 - 12 - 1)/2, 14);
+      display: block;
+      letter-spacing: 0.03em;
+      position: relative;
+      padding-left: em(20, 14);
+      background: {
+        position: left top em(10, 14);
+        repeat: no-repeat;
+      }
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+
+      &:after {
+        width: em(11.08, 14);
+        height: em(4.93, 14);
+        margin: 0;
+        border: none;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: em(3.56 * -0.5, 14);
+        background: {
+          position: center;
+          repeat: no-repeat;
+          size: 100% auto;
+          image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='3.558' viewBox='0 0 8 3.558'%3E%3Cg id='down-arrow' transform='translate(-6.4 -33.4)' opacity='0.6'%3E%3Cpath id='Path_509' data-name='Path 509' d='M14.318,33.469a.325.325,0,0,0-.4,0L10.4,36.4,6.882,33.469a.325.325,0,0,0-.4,0,.208.208,0,0,0,0,.332L10.2,36.889a.307.307,0,0,0,.2.069.32.32,0,0,0,.2-.069L14.311,33.8A.2.2,0,0,0,14.318,33.469Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+
+    .dropdown-menu {
+      .dropdown-item {
+        padding-left:  em(50, 14);
+        position: relative;
+
+        img {
+          position: absolute;
+          width: em(20, 14);
+          top: em(10, 14);
+          left:  em(20, 14);
+        }
+      }
+    }
+  }
+
+  &__global {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath id='language' d='M6,12A6,6,0,1,0,0,6,6,6,0,0,0,6,12ZM.811,3.9,2.517,3.6A8.954,8.954,0,0,0,2.2,5.8H.4A5.563,5.563,0,0,1,.811,3.9ZM11.6,5.8H9.8a8.954,8.954,0,0,0-.314-2.2l1.706.294A5.563,5.563,0,0,1,11.6,5.8Zm-.406,2.3L9.483,8.4A8.954,8.954,0,0,0,9.8,6.2h1.8A5.563,5.563,0,0,1,11.189,8.1ZM5.8,8.789a13.759,13.759,0,0,1-2.144-.2L2.95,8.471A8.585,8.585,0,0,1,2.6,6.2H5.8Zm-2.212.2a14.177,14.177,0,0,0,2.212.2v2.4c-1.147-.11-2.143-1.16-2.707-2.688Zm2.612.2a14.174,14.174,0,0,0,2.212-.2l.5-.086C8.343,10.43,7.347,11.48,6.2,11.59Zm2.144-.6a13.755,13.755,0,0,1-2.144.2V6.2H9.4A8.585,8.585,0,0,1,9.05,8.471ZM9.4,5.8H6.2V3.211a13.759,13.759,0,0,1,2.144.2l.706.122A8.585,8.585,0,0,1,9.4,5.8ZM8.412,3.013A14.224,14.224,0,0,0,6.2,2.81V.41C7.347.52,8.343,1.57,8.907,3.1ZM5.8,2.81a14.223,14.223,0,0,0-2.212.2l-.5.086C3.657,1.57,4.653.52,5.8.41Zm-2.144.6a13.755,13.755,0,0,1,2.144-.2V5.8H2.6A8.585,8.585,0,0,1,2.95,3.529ZM2.2,6.2a8.954,8.954,0,0,0,.314,2.2L.811,8.1A5.563,5.563,0,0,1,.4,6.2ZM1.013,8.543l1.636.282a5.515,5.515,0,0,0,1.591,2.49A5.627,5.627,0,0,1,1.013,8.543ZM7.76,11.315a5.515,5.515,0,0,0,1.591-2.49l1.636-.282A5.627,5.627,0,0,1,7.76,11.315Zm3.227-7.858L9.351,3.175A5.515,5.515,0,0,0,7.76.685,5.627,5.627,0,0,1,10.987,3.457ZM4.24.685a5.515,5.515,0,0,0-1.591,2.49l-1.636.282A5.627,5.627,0,0,1,4.24.685Zm0,0' fill='%23fff' opacity='0.6'/%3E%3C/svg%3E%0A");
+    background-size: em(12, 14);
+    padding-right: em(18, 14);
+  }
+  &__brochure {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.211' height='12' viewBox='0 0 14.211 12'%3E%3Cg id='download_1_' data-name='download (1)' transform='translate(0 -6.242)' opacity='0.6'%3E%3Cg id='Group_215' data-name='Group 215' transform='translate(0 6.242)'%3E%3Cpath id='Path_346' data-name='Path 346' d='M27.8,34.772a.324.324,0,0,0-.324.324v5.05l-1.587-1.628a.3.3,0,0,0-.437,0,.324.324,0,0,0,.01.458l2.054,2.05a.328.328,0,0,0,.462,0l2.051-2.05a.324.324,0,0,0,0-.458.374.374,0,0,0-.5,0l-1.408,1.367V35.1A.324.324,0,0,0,27.8,34.772Z' transform='translate(-20.645 -29.12)' fill='%23fff'/%3E%3Cpath id='Path_347' data-name='Path 347' d='M14.211,11.722a3.2,3.2,0,0,0-3.164-3.234,2.493,2.493,0,0,0-.594.087A3.874,3.874,0,0,0,6.929,6.242,3.919,3.919,0,0,0,3.1,9.618a2.563,2.563,0,0,0-.443-.037,2.663,2.663,0,0,0,0,5.326H5.477a.368.368,0,0,0,0-.735H2.661A1.937,1.937,0,1,1,3.238,10.4l.067.027a.342.342,0,0,0,.31-.045.368.368,0,0,0,.152-.283A3.216,3.216,0,0,1,6.929,6.981,3.178,3.178,0,0,1,9.908,9.142a.377.377,0,0,0,.276.238.347.347,0,0,0,.17-.008,2.325,2.325,0,0,1,.693-.132A2.459,2.459,0,0,1,13.5,11.722a2.415,2.415,0,0,1-2.456,2.45H8.842a.368.368,0,0,0,0,.735h2.205A3.129,3.129,0,0,0,14.211,11.722Z' transform='translate(0 -6.242)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: em(14.21, 14);
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    border-bottom: 1px solid #26394c;
+    max-width: 520px;
+    margin: 0 auto;
+
+    &__item {
+      position: static;
+
+      .dropdown-menu.show {
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+
+        .dropdown-item {
+          flex: 0 0 50%;
+          min-width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.navbar-search {
+  display: flex !important;
+  align-items: center;
+
+  > * {
+    height: em($top);
+  }
+
+  &-show {
+    display: block;
+    width: em(30);
+    height: em(30);
+    background: {
+      position: right center;
+      repeat: no-repeat;
+      size: em(14) auto;
+      image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.013' height='14.016' viewBox='0 0 14.013 14.016'%3E%3Cg id='magnifying-glass' transform='translate(-0.05)' opacity='1'%3E%3Cpath id='Path_508' data-name='Path 508' d='M13.941,13.3,10.535,9.895a5.981,5.981,0,1,0-.59.59l3.406,3.406a.422.422,0,0,0,.3.124.409.409,0,0,0,.3-.124A.42.42,0,0,0,13.941,13.3ZM.886,5.976a5.137,5.137,0,1,1,5.137,5.14A5.143,5.143,0,0,1,.886,5.976Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+    margin-left: 1em;
+    opacity: 0.6;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__close {
+    display: block;
+    width: em($top);
+    height: em($top);
+    background: $bluedark;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include transition();
+      background: {
+        position: center;
+        repeat: no-repeat;
+        size: em(14) auto;
+        image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath id='Path_451' data-name='Path 451' d='M-1.555-45.054l-.5-.486-6.494,6.5-6.507-6.5-.5.486,6.507,6.514-6.507,6.514.5.486,6.507-6.514,6.494,6.514.5-.486L-8.062-38.54Z' transform='translate(15.555 45.54)' fill='%23fff'/%3E%3C/svg%3E%0A");
+        color: $bluedark;
+      }
+      border-radius: 50%;
+      opacity: 0.6;;
+    }    
+    border-radius: em(3) 0 0 em(3);
+    border: 1px solid rgba($white, 0.1);
+    border-right: none;
+
+    @include media-breakpoint-up(md) { 
+      &:hover {
+        &::before {
+          opacity: 1;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      &:before {
+        background: {
+          image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.013' height='14.016' viewBox='0 0 14.013 14.016'%3E%3Cg id='magnifying-glass' transform='translate(-0.05)' opacity='1'%3E%3Cpath id='Path_508' data-name='Path 508' d='M13.941,13.3,10.535,9.895a5.981,5.981,0,1,0-.59.59l3.406,3.406a.422.422,0,0,0,.3.124.409.409,0,0,0,.3-.124A.42.42,0,0,0,13.941,13.3ZM.886,5.976a5.137,5.137,0,1,1,5.137,5.14A5.143,5.143,0,0,1,.886,5.976Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex: 1 1 auto;
+    background: $bluedark;
+
+    .form-control {
+      padding: 0;
+      border-radius: 0;
+      border: 1px solid rgba($white, 0.1);
+      border-left: none;
+      border-right: none;
+      background: transparent;
+      color: $white;
+      &:-internal-autofill-selected {
+        background: transparent !important;
+      }
+
+      &::placeholder {
+        color: rgba($white, 0.6);
+      }
+    }
+
+    .btn {
+      font-weight: em(15);
+      font-family: $font-family-head;
+      font-weight: 700;
+      min-width: em(80,15);
+      border-radius: 0 em(3,15) em(3,15) 0;
+      border: 1px solid $primary;
+      border-left: none;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    top: em($top);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-5%, 0);
+    @include transition();
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, 0);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 15px 0;
+    max-width: 520px;
+    margin: 0 auto;
+
+    &-show {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-between(md, md) {
+    &-show {
+      display: block;
+      width: em(15);
+      margin-left: 10px;
+    }
+  }
+}
+
+// Responsive navbar
+//
+// Custom styles for responsive collapsing and toggling of navbar contents.
+// Powered by the collapse Bootstrap JavaScript plugin.
+
+// When collapsed, prevent the toggleable navbar contents from appearing in
+// the default flexbox row orienation. Requires the use of `flex-wrap: wrap`
+// on the `.navbar` parent.
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  // For always expanded or extra full navbars, ensure content aligns itself
+  // properly vertically. Can be easily overridden with flex utilities.
+  align-items: center;
+  position: relative;
+  padding-top: em($top);
+  justify-content: flex-end;
+  margin: 0 !important;
+  @include transition();
+
+  @include media-breakpoint-down(sm) {
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: $bluedark;
+    padding-top: 0;
+    max-height: calc(100vh - 60px);
+    overflow: auto;
+    border-top: 1px solid #26394c;
+
+    .navbar &:before {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(255,255,255,0.3);
+      outline: none;
+      border-radius: 4px;
+    }
+
+    &.collapsing {
+      overflow: hidden;
+    }
+  
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+// Button for toggling the navbar when in its collapsed state
+.navbar-toggler {
+  padding: $navbar-toggler-padding-y 0;
+  font-size: $navbar-toggler-font-size;
+  line-height: 1;
+  background-color: transparent; // remove default button style
+  border: $border-width solid transparent; // remove default button style
+  position: relative;
+  @include border-radius($navbar-toggler-border-radius);
+
+  @include hover-focus {
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:before,
+  &:after,
+  span:before,
+  span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 22px;
+    background: #fff;
+    top: 50%;
+    right: 0;
+    @include transition();
+  }
+
+  &:before {
+    margin-top: -7px;
+  }
+  &:after {
+    margin-top: 5px;
+  }
+
+  span {
+    &:before,
+    &:after {
+      margin-top: -1px;
+    }
+  }
+
+  &:not(.collapsed) {
+    &:before,
+    &:after {
+      opacity: 0;
+    }
+    span {
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .navbar-toggler elements
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+}
+
+// Keep as a separate element so folks can easily override it with another icon
+// or image file as needed.
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+
+// Generate series of `.navbar-expand-*` responsive classes for configuring
+// where your navbar collapses.
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+
+        .navbar-nav {
+          flex-direction: row;
+
+          .dropdown-menu {
+            position: absolute;
+          }
+        }
+
+        // For nesting containers, have to redeclare for alignment purposes
+        > .container,
+        > .container-fluid {
+          flex-wrap: wrap;
+        }
+
+        .navbar-collapse {
+          display: flex !important;  // stylelint-disable-line declaration-no-important
+
+          // Changes flex-bases to auto because of an IE10 bug
+          flex-basis: auto;
+        }
+
+        .navbar-toggler {
+          display: none;
+        }
+      }
+    }
+  }
+}

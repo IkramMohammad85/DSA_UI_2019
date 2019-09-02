@@ -1,0 +1,27 @@
+script.
+    $(document).ready(function() {
+        validRegister = $("#register").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+            },
+            messages: {
+                email: "Please enter a valid email address",
+            },
+            errorElement: "div",
+            errorPlacement: function ( error, element ) {
+                error.addClass( "invalid-feedback" );
+                error.insertAfter( element.parents( ".input-group" ) );
+            },
+            //- When there is an error normally you just add the class to the element.
+            highlight: function ( element, errorClass, validClass ) {
+                $( element ).addClass( "is-invalid" )
+            },
+            //- When removing make the same adjustments as when adding
+            unhighlight: function (element, errorClass, validClass) {
+                $( element ).removeClass( "is-invalid" );
+            }
+        });
+    })
