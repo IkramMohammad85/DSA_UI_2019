@@ -50,24 +50,20 @@ section.TopBanner {
 	color: #58595b;
 	
 }
-ul.list {
+.list-unstyled.list {
     padding: 0;
 	margin: 0;
 	list-style: none;
 	li {
 		padding: 18px;
 		border-bottom: solid 1px #e7e7e7;
-		list-style: none;
-		overflow: hidden;
 		a {
 			color: #344c70;
 			font-weight: 400;
 		}
 	}
 }
-.hideOverflow {
-	overflow: hidden;
-}
+
 .breadcrumb {
 	background-color: #fff;
 	margin: 0 auto;
@@ -82,8 +78,9 @@ ul.list {
 }
 .contactUs {
 	background: url(https://www.dezshira.com/themes/dsa/images/topics-banners/RightContact-us_Background.jpg) no-repeat top left;
-	width: 360px;
-	height: 420px;
+	width: auto;
+    height: 420px;
+    background-size: cover;
 	.BannerCaption {
 		padding: 30px;
 		h3 {
@@ -91,16 +88,21 @@ ul.list {
 			padding: 30px 20px 0 0;
 			color: #FFF;
 			font-size: 22px;
-			font-style: normal;
+            font-style: normal;
+            a {
+                color: #fff;
+            }
 		}
 		p {
 			margin: 0;
 			padding: 20px 18px 0 0;
-			color: #fff;
+            color: #fff;
+            a {
+                color: #fff;
+            }
 		}
-		.btn-outline {
-			margin-top: 40px;
-		}
+		
+        
 	}
 }
 
@@ -123,11 +125,27 @@ ul.list {
 			color: #fff;
 			font-size: 22px;
 			line-height: 1.3;
+        }
+        
+        a {
+			color: #fff;
 		}
 	}
 }
 .contactBlockSmall {
 	.BannerCaption {
 		padding: 30px 29px 30px 30px;
+	}
+}
+
+section.blue {
+	background-color: #316aa3;
+	padding: 35px 0;
+	color: #FFF;
+	line-height: 36px;
+	h5 {
+		font-size: 18px;
+		color: #FFF;
+		line-height: 20px;
 	}
 }
