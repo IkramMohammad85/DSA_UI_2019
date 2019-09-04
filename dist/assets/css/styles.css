@@ -12311,6 +12311,18 @@ figure {
     .international-desks .eventBody h4 a {
       color: #000; }
 
+section.grey {
+  background-color: #f4f3f3;
+  color: #606163; }
+
+.accordion .card-header:after {
+  font-family: 'Font Awesome 5 Pro';
+  content: "\f078";
+  float: right; }
+
+.accordion .card-header.collapsed:after {
+  content: "\f077"; }
+
 .wrap {
   padding-top: 100px;
   background-color: #fff; }

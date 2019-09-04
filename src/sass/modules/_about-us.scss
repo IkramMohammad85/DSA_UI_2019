@@ -210,3 +210,23 @@ figure {
 		}
 	}
 }
+section.grey {
+    background-color: #f4f3f3;
+    color: #606163;
+
+}
+.accordion {
+	.card-header {
+		&:after {
+			font-family: 'Font Awesome 5 Pro';
+			content:"\f078";
+			float: right;
+			
+		}
+	}
+	.card-header.collapsed {
+		&:after {
+			content: "\f077";
+		}
+	}
+}
