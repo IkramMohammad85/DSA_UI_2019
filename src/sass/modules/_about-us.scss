@@ -230,3 +230,28 @@ section.grey {
 		}
 	}
 }
+.card {
+	.card-header {
+		background-color: #FFF;
+		border-top: solid 3px #1a2940;
+		border-bottom: 0;
+		border-left: 0;
+		border-right: 0;
+		border-radius: 0;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		border-bottom: solid 1px #e6e7e8;
+	}
+}
+.card-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 16px;
+	color: inherit;
+}
+.card {
+	border: 0;
+	box-shadow: none;
+	.card-body{ padding: 0px;}
+}
+
