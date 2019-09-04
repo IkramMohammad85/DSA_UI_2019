@@ -50,7 +50,7 @@ section.TopBanner {
 	color: #58595b;
 	
 }
-.list-unstyled.list {
+.list {
     padding: 0;
 	margin: 0;
 	list-style: none;
@@ -63,7 +63,7 @@ section.TopBanner {
 		}
 	}
 }
-
+.listRightContent{ padding-left: 150px;}
 .breadcrumb {
 	background-color: #fff;
 	margin: 0 auto;
@@ -125,6 +125,7 @@ section.TopBanner {
 			color: #fff;
 			font-size: 22px;
 			line-height: 1.3;
+			font-weight: 700;
         }
         
         a {
@@ -153,5 +154,7 @@ section.blue {
 }
 section.breadcrumbBlock{
 border-bottom: solid 1px #ebebeb;
-.breadcrumb{border: none;}
+.breadcrumb{border: none;
+.breadcrumb-item{ padding-bottom: 0;}
+}
 }
