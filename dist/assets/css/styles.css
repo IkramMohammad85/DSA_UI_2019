@@ -12254,6 +12254,15 @@ section.blue {
     font-size: 18px;
     color: #FFF;
     line-height: 20px; }
+  section.blue h1 {
+    color: white; }
+    section.blue h1 a {
+      color: white; }
+
+section.breadcrumbBlock {
+  border-bottom: solid 1px #ebebeb; }
+  section.breadcrumbBlock .breadcrumb {
+    border: none; }
 
 .wrap {
   padding-top: 100px;
