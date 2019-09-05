@@ -1,0 +1,489 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "Dezan shira"
+
+
+
+block content
+    // Start Content
+    section.TopBanner.TopInnerBanner
+        img(alt='', src='https://www.dezshira.com/themes/dsa/images/topics-banners/careers.jpg')
+        .BannerCaption
+            .container
+                .row
+                    .col-sm-12.col-md-10.col-lg-10
+                        h1 Careers
+                        p Working at Dezan Shira & Associates is about growth. That means developing skills, making a difference, and achieving goals to help colleagues and clients reach new heights.
+
+    section.breadcrumbBlock
+        nav(aria-label='breadcrumb')
+            .container
+                .row
+                    .col-sm-12.col-md-12.col-lg-12
+                        ol.breadcrumb
+                            li.breadcrumb-item.active(aria-current='page') Careers
+
+    section#featuredOffers
+        .container
+            h1.text-center.heading Featured Offers
+            .row
+                .col-lg-4.col-md-4.col-sm-4
+                    .boxContent.border
+                        h4
+                            a(href='https://www.dezshira.com/career/details/singapore/junior-company-secretary-178.html') Junior Company Secretary
+                        h5 Associate | Business Advisory Services  
+                        h6 Singapore | Singapore
+                .col-lg-4.col-md-4.col-sm-4
+                    .boxContent.border
+                        h4
+                            a(href='https://www.dezshira.com/career/details/vietnam/business-intelligence-intern-176.html') Business Intelligence Intern
+                        h5 Assistant (Intern) | Business Intelligence  
+                        h6 HCMC / Hanoi | Vietnam
+                .col-lg-4.col-md-4.col-sm-4
+                    .boxContent.border
+                        h4
+                            a(href='https://www.dezshira.com/career/details/india/graphic-designer-asia-briefing-175.html') Graphic Designer, Asia Briefing
+                        h5 Associate | Marketing  
+                        h6 Delhi | India
+    section#jobs
+        .container-fluid
+            .row
+                .col-sm-6.col-md-6.col-lg-6.internship
+                    h2 Internship program
+                    p
+                        | Find your fit in an environment where you can explore new skills and interests. We offer a flexible internship for personal and professional growth.
+                    a.btn.btn-outline-light(href='https://www.dezshira.com/career/search?role=Assistant+%28Intern%29') see OFFERS
+                .col-sm-6.col-md-6.col-lg-6.banner.fullTime
+                    h2 Full time jobs
+                    p
+                        | Make your next move with a growing team of entrepreneurial professionals from across the world. We provide the platform for success.
+                    a.btn.btn-outline-light(href='https://www.dezshira.com/career/search?type=permanent') SEE OFFERS
+
+    section#OurCoreValues
+        .container
+            .row
+                .col-sm-12.col-md-12.col-lg-12
+                    h1.text-center.heading.mb-3 Our Core Values
+                    p.text-center
+                        | We are motivated by our core values. These values have enabled our continued success as 
+                        br
+                        | trusted advisors for international businesses across Asia.
+            .row
+                .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                    h2
+                        i.sprite.sprite-retina.icon-innoCreat
+                        |  Innovation and Creativity
+                    p
+                        | We are always looking to expand our boundaries, knowing that an environment of sharing and collaboration will foster the continual development of our practice.
+                .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                    h2
+                        i.sprite.sprite-retina.icon-ethics
+                        |  Ethics
+                    p
+                        | We act with highest standards of personal and professional integrity; our business is run honestly, without cutting corners.
+                .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                    h2
+                        i.sprite.sprite-retina.icon-culturaldiver
+                        |  Cultural Diversity
+                    p
+                        | Our clients come from all over the world, and so do we. We are proud to attract and retain diverse talent to ensure our offices have multiple perspectives and global insight.
+                .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                    h2
+                        i.sprite.sprite-retina.icon-diligence
+                        |  Diligence
+                    p
+                        | We love what we do, and our commitment to quality means that we approach our work with unmatched enthusiasm and dedication, to our people and to our clients.
+                .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                    h2
+                        i.sprite.sprite-retina.icon-prudence
+                        |  Prudence
+                    p
+                        | We take our work seriously, which is why our clients feel confident that we will provide sound advice in increasingly complex emerging markets.
+                .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                    h2
+                        i.sprite.sprite-retina.icon-perseverance
+                        |  Perseverance
+                    p
+                        | We know that the best solutions don&rsquo;t always come easily. Our employees are empowered to challenge their assumptions in an environment where they have the freedom to reach their full potential.
+
+    section.MeetOurPeople
+        .container
+            .row
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    h2.heading Meet Our People
+                    p
+                        | Since its establishment in 1992, Dezan Shira &amp; Associates has grown into one of Asia&apos;s most versatile full-service consultancies with operational offices across China, Hong Kong, India, Singapore and Vietnam as well as liaison offices in Italy and the United States. By joining our international team, you will be one of many business professionals committed to improving the understanding and transparency of investing in emerging Asia.
+                    a.btn.btn-outline-dark(href='#testimonial') see testimonies
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    #meetOurPeople.carousel.slide(data-ride='carousel')
+                        // Indicators
+                        ol.carousel-indicators
+                            li(data-target='#meetOurPeople', data-slide-to='0')
+                            li.active(data-target='#meetOurPeople', data-slide-to='1')
+                            li(data-target='#meetOurPeople', data-slide-to='2')
+                            li(data-target='#meetOurPeople', data-slide-to='3')
+                            li(data-target='#meetOurPeople', data-slide-to='4')
+                            li(data-target='#meetOurPeople', data-slide-to='5')
+                            li(data-target='#meetOurPeople', data-slide-to='6')
+                        // Wrapper for slides
+                        .carousel-inner
+                            .carousel-item
+                                img.d-block.w-100(alt='', src='https://www.dezshira.com/themes/dsa/images/career/slide1.jpg')
+                            .carousel-item.active
+                                img.d-block.w-100(alt='', src='https://www.dezshira.com/themes/dsa/images/career/slide2.jpg')
+                            .carousel-item
+                                img.d-block.w-100(alt='', src='https://www.dezshira.com/themes/dsa/images/career/slide3.jpg')
+                            .carousel-item
+                                img.d-block.w-100(alt='', src='https://www.dezshira.com/themes/dsa/images/career/slide4.jpg')
+                            .carousel-item
+                                img.d-block.w-100(alt='', src='https://www.dezshira.com/themes/dsa/images/career/slide5.jpg')
+                            .carousel-item
+                                img.d-block.w-100(alt='', src='https://www.dezshira.com/themes/dsa/images/career/slide6.jpg')
+                            .carousel-item
+                                img.d-block.w-100(alt='', src='https://www.dezshira.com/themes/dsa/images/career/slide7.jpg')
+
+    section.TopBanner.get-in-touch
+        img(alt='', src='https://www.dezshira.com/themes/dsa/images/Resources-Foreign-Investors.jpg')
+        .BannerCaption
+            .container
+                .row
+                    .col-xs-12.col-sm-8.col-md-8.col-lg-8.offset-lg-2.offset-md-2.offset-sm-2.text-center
+                        h1.text-center.heading Get in touch
+                        p.text-center.mb-3 We want to connect with professionals that have a diverse array of experiences, skills, and goals. Log-in to our career portal so that we can start a conversation.
+                        a.btn.btn-outline-light.mr-3(href='https://www.dezshira.com/login') Log in now
+                        a.btn.btn-outline-light(href='https://www.dezshira.com/register.html') SIGN UP 
+
+    section#testimonial
+        .container
+            .row
+                .col-sm-4.col-md-4.col-lg-4
+                    .testimonial-wrapper
+                        .testimonial
+                            | &ldquo; For a company that values talent and provides the environment for it to be developed, putting in hard work and taking your career seriously would ensure that your roles and responsibilities will grow each year. &rdquo;
+                        .media
+                            .media-left.d-flex.mr-3
+                                img(src='//www.asiabriefing.com/site-mgmt-v2/new/userfiles/personnel/Hannah_Feng200200.jpg', alt='')
+                            .media-body
+                                .overview
+                                    .name
+                                        b Hannah Feng
+                                    .details
+                                        | Senior Manager | Corporate Accounting Services | Beijing
+                .col-sm-4.col-md-4.col-lg-4
+                    .testimonial-wrapper
+                        .testimonial
+                            | &ldquo;  I am very proud of my Dalian HR and payroll team, which has grown to be more proficient in coping with the demands of clients from multinational backgrounds. &rdquo;
+                        .media
+                            .media-left.d-flex.mr-3
+                                img(src='//www.asiabriefing.com/site-mgmt-v2/new/userfiles/personnel/Helen_kong_200x200.jpg', alt='')
+                            .media-body
+                                .overview
+                                 .name
+                                    b Helen Kong
+                                .details
+                                    | Manager | Human Resources | Dalian Office
+            // /col
+            // /row
+
+    
+
+   
+    
+
+
+    
+        // /container
+        
+    
+    // End Content
+
+block js
+    |
+    |
+    // Javacript dezshira - old
+    script(src='https://www.dezshira.com/themes/dsa/js/jquery.validate.min.js')
+    script(src='https://www.dezshira.com/themes/dsa/js/jquery.material.form.js')
+    script.
+        //for tooltip
+        $(document).ready(function(){
+            $('form.material').materialForm(); // Apply material
+            $('form.material').each(function(i, obj) {
+                $(this).validate({
+                errorPlacement:function(error, element) {
+                        var name = element.attr('name');	
+                }
+                }); // Apply validator with no error messages but classes only
+            });
+            $('[data-toggle="tooltip"]').tooltip(); 
+        });
+        $("div#sidebarnav ul.collapsible li a[href$='/login']").parent().addClass("active");
+        $("div#sidebarnav ul.collapsible li a[href$='/login']").parent().parents('li').addClass("active");
+        
+        
+        //mini contact form submit
+        var frm = $('form#contact_form');
+
+        frm.submit(function (e) {
+            e.preventDefault();
+            var isvalid = $("form.material").valid();
+            if (isvalid) {
+            $('#loading').show();
+            $('#message').html('<i class="fas fa-spinner"></i>');
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(),
+                success: function (data) {
+                    
+                    $('#message').removeClass("alert alert-danger alert-success");
+                    if(data=="invalid_code"){
+                        $('#message').addClass("alert alert-danger").html('Invalid Security Code.');
+                        $('#loading').hide();
+                        $("#reload_captcha").click();
+                    } else if(data=="invalid_token"){
+                        $('#message').addClass("alert alert-danger").html('Invalid Form Token.');
+                        $('#loading').hide();
+                        $("#reload_captcha").click();
+                    } else {
+                        $('#message').addClass("alert alert-success").html('Thank you for your message.');
+                        
+                        
+                        //frm.find('input, textarea').each(function(i){
+                        //	$(this).val();
+                        //});
+                        document.getElementById("contact_form").reset();
+                        $("#reload_captcha").click();
+                        $('#loading').hide();
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    $('#loading').hide();
+                    $('#message').html('Sorry, response from the POST URL is empty: <br />'+xhr.status);
+                    $("#reload_captcha").click();
+            },
+            });
+            }
+        });
+        
+            $("#reload_captcha").click(function(){
+                $("#siimage").attr("src","");
+                d = new Date();
+                $("#siimage").attr("src", "https://www.dezshira.com/includes/modules/securimage/securimage_show_mini.php?"+d.getTime());
+            });
+        
+        $("#btn_mini_contact_form").click(function() {
+            $('html, body').animate({
+                scrollTop: ($("#mini_contact_form").offset().top)-300
+            }, 2000);
+        });
+        
+        $('select#country').on('change', function() {
+            if ($(this).val()) {
+                return $(this).css('color', '#333333');
+            } else {
+                return $(this).css('color', 'gray');
+            }
+        });
+
+    script(src='https://www.dezshira.com/themes/dsa/js/bundle.js')
+    script(src='https://www.dezshira.com/themes/dsa/js/owl.carousel.min.js')
+    script.
+        //for tooltip
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        $("div#sidebarnav ul.collapsible li a[href$='/services/business-intelligence-solutions']").parent().addClass("active");
+        $("div#sidebarnav ul.collapsible li a[href$='/services/business-intelligence-solutions']").parent().parents('li').addClass("active");
+    
+    script(src='https://www.dezshira.com/themes/dsa/js/fontawesome-all.min.js')
+    script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-1909572-7', 'auto');
+        ga('send', 'pageview');
+
+            // mailto function
+            $('a[href^="mailto:"]').click(function(){
+                ga('send','event','mailto','click','email clicked');
+                return true;
+            });
+    
+    script(type='text/javascript', src='https://analytics-au.clickdimensions.com/ts.js')
+    script.
+        var cdAnalytics = new clickdimensions.Analytics('analytics-au.clickdimensions.com');
+        cdAnalytics.setAccountKey('aHzoBJhlGD02xy7dPmDtCQ');
+        cdAnalytics.setDomain('dezshira.com');
+        cdAnalytics.setScore(typeof(cdScore) == "undefined" ? 0 : (cdScore == 0 ? null : cdScore));
+        cdAnalytics.trackPage();
+        
+        window.__lo_site_id = 125015;
+        (function() {
+            var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+            wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+        })();
+
+    script(type='text/javascript').
+        if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","bam.nr-data.net","3283726c53","2874630","Z1AGZkEHD0JVVxVQWF4aMUBaSQhfUFEZF0dYRQ==",0,55,new Date().getTime(),"","","","",""]);
+
+    script(type='text/javascript', src='https://js-agent.newrelic.com/nr-100.js')
+    script(type='text/javascript', src='https://bam.nr-data.net/1/3283726c53?a=2874630&be=1001&qt=0&ap=55&dc=342&fe=550&to=Z1AGZkEHD0JVVxVQWF4aMUBaSQhfUFEZF0dYRQ%3D%3D&v=42&jsonp=NREUM.setToken&perf=%7B%22timing%22%3A%7B%22of%22%3A1552965194928%2C%20%22n%22%3A0%2C%20%22u%22%3A971%2C%20%22ue%22%3A971%2C%20%22dl%22%3A978%2C%20%22di%22%3A1342%2C%20%22ds%22%3A1342%2C%20%22de%22%3A1348%2C%20%22dc%22%3A1550%2C%20%22l%22%3A1550%2C%20%22le%22%3A1551%2C%20%22f%22%3A1%2C%20%22dn%22%3A1%2C%20%22dne%22%3A1%2C%20%22c%22%3A1%2C%20%22ce%22%3A1%2C%20%22rq%22%3A4%2C%20%22rp%22%3A958%2C%20%22rpe%22%3A967%7D%2C%20%22navigation%22%3A%7B%7D%7D')
+
+    // End Javacript dezshira - old
+
+block modal
+    |
+    |
+    // Start modal
+    #quickViewModal.modal.fade(role='dialog', tabindex='-1', aria-labelledby='gridModalLabel')
+        .modal-dialog(role='document')
+            .modal-content.radius-none
+                .modal-header.section-title
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                    h4#gridSystemModalLabel.modal-title Our Regional Publications
+                .modal-body.top-bg-contain.book-detail-bg-banner
+                    #iframeContainer
+
+    #Loginpopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-dialog.modal-md
+            .modal-content
+                .modal-header.text-center
+                    button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                    a(href='https://www.dezshira.com/library')
+                        img(alt='', src='https://www.dezshira.com/themes/dsa/images/asiapedia-logo.png', srcset='https://www.dezshira.com/themes/dsa/images/asiapedia-logo-2X.png 2x')
+                    p.text-center A place to share knowledge and better understand Asia
+                .modal-body
+                    .row
+                        .col-sm-6.col-md-6.col-lg-6
+                            h4#myModalLabel.modal-title.text-center Log In
+                            form#loginForm.padd15.padd-TopNone(action='https://www.dezshira.com/login?action=post_form', method='POST')
+                                input(type='hidden', name='dsa_login_token', value='5643e57dfd6544a0243c8b6f26f7e85c529b77080ccdd61c4209401cfe01ce58')
+                                .form-group.input-group
+                                    span.input-group-addon
+                                        svg.svg-inline--fa.fa-envelope.fa-w-16(aria-hidden='true', data-prefix='far', data-icon='envelope', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z')
+                                        // <i class="far fa-envelope"></i>
+                                    input.form-control(type='text', name='email', placeholder='email')
+                                .form-group.input-group
+                                    span.input-group-addon
+                                        svg.svg-inline--fa.fa-lock.fa-w-14(aria-hidden='true', data-prefix='fas', data-icon='lock', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 448 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z')
+                                        // <i class="fas fa-lock"></i>
+                                    input.form-control(type='password', name='password', placeholder='password')
+                                p.text-right
+                                    a(href='http://www.asiabriefing.com/customer/forgot-password')
+                                        small Forgot Password?
+                                .form-group.text-center
+                                    input.btn.btn-lg.btn-outline.blue-btn.btnNormalWidth(type='submit', value='LOGIN')
+                                .form-group.text-center
+                                    small
+                                        | Don't have an account? 
+                                        a(href='https://www.dezshira.com/register') Sign Up
+                        .col-sm-6.col-md-6.col-lg-6.greyLeftBorder
+                            .subscriptionBlock
+                                #subscriptionCarousel.carousel.slide(data-ride='carousel')
+                                    // Carousel indicators
+                                    ol.carousel-indicators
+                                        li(data-target='#subscriptionCarousel', data-slide-to='0')
+                                        li(data-target='#subscriptionCarousel', data-slide-to='1')
+                                        li(data-target='#subscriptionCarousel', data-slide-to='2')
+                                        li(data-target='#subscriptionCarousel', data-slide-to='3')
+                                    // Wrapper for carousel items
+                                    .carousel-inner
+                                        .item.next.left
+                                            h4.modal-title.text-center Publication
+                                            i.sprite.sprite-retina.icon-publications
+                                            .carousel-caption
+                                                p Download our FREE magazines and guides
+                                        .item
+                                            h4.modal-title.text-center News 
+                                            i.sprite.sprite-retina.icon-news
+                                            .carousel-caption
+                                                p
+                                                    | Stay up-to-date on breaking news, regulatory updates and Asia Briefing Publications
+                                        .item
+                                            h4.modal-title.text-center Multimedia
+                                            i.sprite.sprite-retina.icon-ksp
+                                            .carousel-caption
+                                                p Access presentations, webinars, podcasts, reports, Q&As and more
+                                        .item.active.left
+                                            h4.modal-title.text-center Dashboard
+                                            i.sprite.sprite-retina.icon-dashboard
+                                            .carousel-caption
+                                                p Track paid orders and connect with our support team
+                                    // Carousel controls
+
+    #logoDownload.modal.fade.logoDownload(role='dialog')
+        .modal-dialog
+            // Modal content
+            .modal-content
+                .modal-header
+                    button.close(type='button', data-dismiss='modal') ×
+                    a(href='https://www.dezshira.com/')
+                        img.logo.center-block.margin20Top(alt='', src='https://www.dezshira.com/themes/dsa/images/logo.png', srcset='https://www.dezshira.com/themes/dsa/images/logo-2X.png 2x')
+                .modal-body
+                    h4.section-title Dezan Shira & Associates logos
+                    table.table.table-striped
+                        tbody
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_vertical (EPS).eps', target='_blank') Dezan Shira & Associates logo_vertical(EPS)
+                                td.lightgreyColor 254KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_vertical (EPS).eps', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_vertical (PNG).png', target='_blank') Dezan Shira & Associates logo_vertical(PNG)
+                                td.lightgreyColor 14KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_vertical (PNG).png', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_horizontal (EPS).eps', target='_blank') Dezan Shira & Associates logo_horizontal(EPS)
+                                td.lightgreyColor 566KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_horizontal (EPS).eps', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_horizontal (PNG).png', target='_blank') Dezan Shira & Associates logo_horizontal(PNG)
+                                td.lightgreyColor 49KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira & Associates logo_horizontal (PNG).png', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira Asian Alliance logo_horizontal (EPS).eps', target='_blank') Dezan Shira Asian Alliance(EPS)
+                                td.lightgreyColor 305KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira Asian Alliance logo_horizontal (EPS).eps', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+                            tr
+                                td
+                                    a(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira Asian Alliance logo_horizontal (PNG).png', target='_blank') Dezan Shira Asian Alliance(PNG)
+                                td.lightgreyColor 18KB
+                                td
+                                    a.lightgreyColor(href='https://www.dezshira.com/themes/dsa/images/dsa-logo/Dezan Shira Asian Alliance logo_horizontal (PNG).png', target='_blank')
+                                        svg.svg-inline--fa.fa-cloud-download-alt.fa-w-20(aria-hidden='true', data-prefix='fas', data-icon='cloud-download-alt', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 640 512', data-fa-i2svg='')
+                                            path(fill='currentColor', d='M640 352c0 70.692-57.308 128-128 128H144C64.471 480 0 415.529 0 336c0-62.773 40.171-116.155 96.204-135.867A163.68 163.68 0 0 1 96 192c0-88.366 71.634-160 160-160 59.288 0 111.042 32.248 138.684 80.159C409.935 101.954 428.271 96 448 96c53.019 0 96 42.981 96 96 0 12.184-2.275 23.836-6.415 34.56C596.017 238.414 640 290.07 640 352zm-246.627-64H328V176c0-8.837-7.164-16-16-16h-48c-8.836 0-16 7.163-16 16v112h-65.373c-14.254 0-21.393 17.234-11.314 27.314l105.373 105.373c6.248 6.248 16.379 6.248 22.627 0l105.373-105.373c10.08-10.08 2.941-27.314-11.313-27.314z')
+                                        // <i class="fas fa-cloud-download-alt"></i>
+
+
+    // End modal
