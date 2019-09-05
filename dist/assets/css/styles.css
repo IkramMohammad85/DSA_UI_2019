@@ -12257,7 +12257,8 @@ section.blue {
   section.blue h5 {
     font-size: 18px;
     color: #FFF;
-    line-height: 20px; }
+    line-height: 20px;
+    font-weight: 400; }
   section.blue h1 {
     color: white; }
     section.blue h1 a {
@@ -12398,6 +12399,57 @@ ul.list li .articleThumbnail {
 
 .hideOverflow {
   overflow: hidden; }
+
+.event_block {
+  width: 100%;
+  display: block;
+  overflow: hidden; }
+  .event_block .date_block {
+    width: 132px;
+    height: 132px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 48px;
+    background-color: #344c70;
+    float: left; }
+    .event_block .date_block .date {
+      font-size: 14px;
+      display: block;
+      padding-top: 36px;
+      color: #FFF;
+      text-transform: uppercase; }
+      .event_block .date_block .date span {
+        font-size: 36px;
+        display: block;
+        padding-top: 5px;
+        font-weight: 400;
+        line-height: 18px; }
+  .event_block:hover .date_block {
+    background-color: #486b9a; }
+  .event_block .dec_block {
+    overflow: hidden; }
+    .event_block .dec_block .title {
+      font-size: 18px;
+      line-height: 28px;
+      color: #000;
+      padding: 0;
+      margin: 0; }
+      .event_block .dec_block .title a {
+        color: #000; }
+    .event_block .dec_block .dec {
+      padding-bottom: 20px;
+      padding-top: 10px;
+      margin: 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px; }
+    .event_block .dec_block .date_time {
+      padding: 0;
+      margin: 0 0 20px;
+      margin-bottom: 20px;
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 20px; }
 
 .wrap {
   padding-top: 100px;
