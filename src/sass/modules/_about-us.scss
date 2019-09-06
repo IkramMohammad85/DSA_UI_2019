@@ -561,3 +561,153 @@ section.TopBanner.get-in-touch .BannerCaption{ margin-top: 80px; margin-bottom: 
 //left side navbar
 
 .lightGraybg{ background-color: #fafafa;}
+
+//services page
+.viewOnHover {
+	margin: 15px 0px;
+	padding: 0px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	text-align: left;
+	cursor: default;
+	height: 202px;
+	.mask {
+		width: 555px;
+		height: 202px;
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		padding: 0px 30px;
+	}
+	.content {
+		width: 555px;
+		height: 202px;
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		padding: 0px 30px;
+	}
+	img {
+		display: block;
+		position: relative;
+	}
+	.title {
+		display: block;
+		position: relative;
+		top: -60px;
+		position: relative;
+		text-align: left;
+		margin-left: 30px;
+		color: #fff;
+		font-size: 24px;
+		font-weight: 300;
+		a {
+			color: #FFFFFF;
+		}
+	}
+	h2 {
+		color: #fff;
+		text-align: left;
+		position: relative;
+		font-size: 22px;
+		padding: 10px 0px;
+		margin: 20px 0 0 0;
+		font-weight: 300;
+	}
+	p {
+		font-size: 14px;
+		position: relative;
+		color: #fff;
+		padding: 0px 0px 10px 0px;
+		text-align: left;
+	}
+	a.info {
+		display: inline-block;
+		text-decoration: none;
+		padding: 7px 0px;
+		background: transparent;
+		color: #fff;
+		text-transform: uppercase;
+		box-shadow: none;
+		border: none;
+		font-weight: normal;
+		font-size: 11px;
+		&:hover {
+			box-shadow: none;
+		}
+	}
+	.info {
+		color: #FFFFFF;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-family: 'Hind', sans-serif;
+		font-style: normal;
+	}
+}
+#innerPage {
+	.viewOnHover {
+		h2 {
+			color: #FFFFFF;
+		}
+	}
+}
+.viewOnHover-first {
+	img {
+		transition: all 0.2s linear;
+		width: 555px;
+		height: 202px;
+	}
+	.title {
+		transition: all 0.2s linear;
+	}
+	.mask {
+		opacity: 0;
+		background-color: rgba(26, 41, 64, 0.70);
+		transition: all 0.4s ease-in-out;
+	}
+	h2 {
+		transform: translateY(-100px);
+		opacity: 0;
+		font-style: normal;
+		font-weight: 500;
+		transition: all 0.2s ease-in-out;
+	}
+	p {
+		transform: translateY(100px);
+		opacity: 0;
+		transition: all 0.2s linear;
+	}
+	a.info {
+		opacity: 0;
+		transition: all 0.2s ease-in-out;
+	}
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+		.title {
+			display: none;
+		}
+		.mask {
+			opacity: 1;
+		}
+		h2 {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		p {
+			opacity: 1;
+			transform: translateY(0px);
+			transition-delay: 0.1s;
+		}
+		a.info {
+			opacity: 1;
+			transform: translateY(0px);
+			transition-delay: 0.2s;
+		}
+	}
+}
