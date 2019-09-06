@@ -12615,6 +12615,9 @@ section.TopBanner.get-in-touch .BannerCaption {
 .borderTopDarkblue {
   border-top: solid 3px #1a2940 !important; }
 
+.lightGraybg {
+  background-color: #fafafa; }
+
 div#sidebarnav {
   background-color: #fff;
   min-height: 430px; }
