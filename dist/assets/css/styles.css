@@ -12656,9 +12656,16 @@ div#sidebarnav ul > li > ul > li a {
   padding-left: 20px; }
 
 div#sidebarnav ul > li > ul > li a {
-  color: #fff;
+  color: #58595b;
   font-weight: normal;
   padding-left: 30px; }
+
+div#sidebarnav ul > li > ul > li a {
+  color: #58595b;
+  border-bottom: solid 1px #f1f2f2; }
+
+div#sidebarnav ul > li.level3.active > a {
+  color: #2981d1; }
 
 div#sidebarnav ul > li > ul > li a:hover {
   color: #fff; }

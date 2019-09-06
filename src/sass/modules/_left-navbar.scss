@@ -5,7 +5,9 @@ div#sidebarnav ul > li.firstChildpadd{ padding-top:10px;}
 div#sidebarnav ul > li a { text-decoration:none; display:block;  padding:10px 19px 10px 19px; color: #344c70;border-bottom: solid 1px #f1f2f2;    font-weight: 400;}
 div#sidebarnav ul > li > ul > li a { color:#fff; padding-left:10px; font-weight:normal;}
 div#sidebarnav ul > li > ul > li a { color:#fff; font-weight:normal; padding-left:20px;}
-div#sidebarnav ul > li > ul > li a { color:#fff; font-weight:normal; padding-left:30px;}
+div#sidebarnav ul > li > ul > li a { color:#58595b; font-weight:normal; padding-left:30px;}
+div#sidebarnav ul > li > ul > li a { color: #58595b;    border-bottom: solid 1px #f1f2f2;}
+div#sidebarnav ul > li.level3.active > a {  color: #2981d1;}
 div#sidebarnav ul > li > ul > li a:hover{color:#fff;}
 body.script div#sidebarnav ul.collapsible li ul{display:none;}
 div#sidebarnav ul.collapsible li.active > ul{display:block;}
