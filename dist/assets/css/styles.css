@@ -12595,6 +12595,12 @@ section.TopBanner.get-in-touch .BannerCaption {
     background: #FFF;
     padding: 0; }
 
+.btn.disabled {
+  cursor: not-allowed; }
+
+.borderTopDarkblue {
+  border-top: solid 3px #1a2940 !important; }
+
 .wrap {
   padding-top: 100px;
   background-color: #fff; }
